@@ -9,7 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
     <style>
         body {
-            overflow: auto;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;	
+            overflow-x: hidden;
             background: fixed radial-gradient(#A7E0FF, #76CFFF, #0DAAFF);
             text-align: center;
         }
@@ -21,7 +25,27 @@
             margin: 0;
         }
 
-        button {
+        h3 {
+            font: 1.8rem "Raleway", sans-serif;
+            color: #004469;
+            text-shadow: 0 0 2px #000E95;
+            margin-bottom: max(2vh, 4vw);
+        }
+
+        p {
+            font: 1.3rem "Raleway", sans-serif;
+            color: #004469;
+            text-shadow: 0 0 2px #000E95;
+            margin-top: -1vh;
+        }
+
+        section {
+            position: relative;
+			margin: auto;
+            max-width: 60%;
+        }
+
+        .button {
             max-width: max(20vw, 30vh);
             margin-top: min(1vh, 1vw);
             margin-bottom: min(6vh, 6vw);
@@ -35,37 +59,17 @@
             transition-duration: 0.3s;
         }
 
-        button:hover {
+        .button:hover {
             opacity: 1;
             box-shadow: 0 6px 8px #004469;
         }
 
-        button:active {
+        .button:active {
             box-shadow: 0 1px black;
             transform: translateY( 1px);
         }
 
-        p {
-            font: 1.3rem "Raleway", sans-serif;
-            color: #004469;
-            text-shadow: 0 0 2px #000E95;
-            margin-top: -1vh;
-        }
-
-        h3 {
-            font: 1.8rem "Raleway", sans-serif;
-            color: #004469;
-            text-shadow: 0 0 2px #000E95;
-            margin-bottom: max(2vh, 4vw);
-        }
-
-        section {
-            position: relative;
-			margin: auto;
-            max-width: 60%;
-        }
-        
-        .p-botoes {
+	.p-botoes {
             font-size: min(2rem, 4vh);
         }
 
@@ -94,10 +98,10 @@
 <body>
     <h1 id="titulo1">Combo</h1>
     <h1 id="titulo2">Sorteios</h1>
-    <p class="p-botoes">Já possui uma conta?</p>
+    <a href="login.html" class="button">Entrar</a>
     <button>Entrar</button>
     <p class="p-botoes">Deseja criar uma conta?</p>
-    <button>Cadastre-se</button>
+    <a href="cadastro.html" class="button">Cadastre-se</a>
     <div id="fade">
         <section id="texto">
             <h3>Conheça nosso site:</h3>
