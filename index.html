@@ -13,7 +13,7 @@
             height: 100%;
             margin: 0px;
             padding: 0px;	
-            overflow-x: hidden;
+            overflow-x: auto;
             background: fixed radial-gradient(#A7E0FF, #76CFFF, #0DAAFF);
             text-align: center;
         }
@@ -46,6 +46,8 @@
         }
 
         .button {
+			display: inline-block;
+			text-decoration: none;
             max-width: max(20vw, 30vh);
             margin-top: min(1vh, 1vw);
             margin-bottom: min(6vh, 6vw);
@@ -98,8 +100,8 @@
 <body>
     <h1 id="titulo1">Combo</h1>
     <h1 id="titulo2">Sorteios</h1>
+	<p class="p-botoes">Já possui uma conta?</p>
     <a href="login.html" class="button">Entrar</a>
-    <button>Entrar</button>
     <p class="p-botoes">Deseja criar uma conta?</p>
     <a href="cadastro.html" class="button">Cadastre-se</a>
     <div id="fade">
