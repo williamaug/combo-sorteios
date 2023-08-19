@@ -1,34 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <title>Combo Sorteios</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
-        <style>
-            body {background: fixed radial-gradient(#A7E0FF, #76CFFF, #0DAAFF);}
-            div {background: linear-gradient(transparent, white, transparent); position: absolute; left: 0; right: 0; height: 80vh;}
-            h1 {font: bold 12vh "Raleway", sans-serif; color: white; text-align: center; text-decoration: none; text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469; margin: 0;}
-            p {text-align: center; font: 3vh "Raleway", sans-serif; color: #004469; text-shadow: 0 0 2px #000E95; margin-top: -1vh;}
-            .p-botoes {font-size: 4vh; text-decoration: underline;}
-            .button {display: inline-block; position: relative; left: 50%; transform: translateX(-50%); margin-top: 1.5vh; margin-bottom: 7vh; font: 3vh "Raleway", sans-serif; text-decoration: none; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: 1.5vh 2.5vw; opacity: 0.9; transition-duration: 0.3s;}
-            .button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
-            .button:active {box-shadow: 0 1px black; transform: translate(-50%, 1px);}
-            #p-inicial {font-size: 4vh; margin-top: 36vh;}
-            #titulo1 {margin-top: 10vh; font-style: italic;}
-            #titulo2 {margin-top: -1vh; margin-bottom: 18vh; text-decoration: dashed 14px underline;}
-        </style>
-    </head>
-    <body>
-        <h1 id="titulo1">Combo</h1><h1 id="titulo2">Sorteios</h1>
-        <p class="p-botoes">Já possui uma conta?</p>
-        <a href="login.html" class="button">Entrar</a>
-        <p class="p-botoes">Deseja criar uma conta?</p>
-        <a href="cadastro.html" class="button">Cadastre-se</a>
-        <div>
-            <p id="p-inicial">Conheça nossa plataforma:</p>
-            <p>Bla bla bla.</p>
-        </div>
-    </body>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Combo Sorteios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            overflow-x: hidden;
+            background: fixed radial-gradient(#A7E0FF, #76CFFF, #0DAAFF);
+            text-align: center;
+        }
+
+        h1 {
+            font: bold 5rem "Raleway", sans-serif;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
+            margin: 0;
+        }
+
+        button {
+            max-width: 40%;
+            margin-top: 1.5vh;
+            margin-bottom: 7vh;
+            font: 3vh "Raleway", sans-serif;
+            background-color: #000E95;
+            color: white;
+            border: 2px solid #000B72;
+            border-radius: 6px;
+            padding: 1.5vh 2.5vw;
+            opacity: 0.9;
+            transition-duration: 0.3s;
+        }
+
+        button:hover {
+            opacity: 1;
+            box-shadow: 0 6px 8px #004469;
+        }
+
+        button:active {
+            box-shadow: 0 1px black;
+            transform: translateY( 1px);
+        }
+
+        p {
+            font: 1.3rem "Raleway", sans-serif;
+            color: #004469;
+            text-shadow: 0 0 2px #000E95;
+            margin-top: -1vh;
+        }
+
+        section {
+            margin: auto;
+            max-width: 70%;
+        }
+        
+        .p-botoes {
+            font-size: 1.5rem;
+            text-decoration: underline;
+        }
+
+        #fade {
+            background: linear-gradient(transparent, white, transparent);
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 100vh;
+        }
+
+        h3 {
+            font: 1.8rem "Raleway", sans-serif;
+            color: #004469;
+            text-shadow: 0 0 2px #000E95;
+            margin-top: 26vh;
+        }
+
+        #titulo1 {
+            margin-top: 10vh;
+            font-style: italic;
+        }
+
+        #titulo2 {
+            margin-top: -1vh;
+            margin-bottom: 18vh;
+            text-decoration: dashed 14px underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo1">Combo</h1>
+    <h1 id="titulo2">Sorteios</h1>
+    <p class="p-botoes">Já possui uma conta?</p>
+    <button>Entrar</button>
+    <p class="p-botoes">Deseja criar uma conta?</p>
+    <button>Cadastre-se</button>
+    <div id="fade">
+        <h3 id="p-inicial">Conheça nosso site:</h3>
+        <section id="texto">
+            <p>A <i>Combo</i> Sorteios é uma plataforma que permite aos usuários criar, gerenciar, realizar e participar de sorteios online de forma rápida e simples, simultaneamente facilitando o processo para os participantes tal como para os sorteantes.<br>Basta criar uma conta e poderá criar ou registrar-se para participar de todos os sorteios que quiser em segundos.
+            </p>
+        </section>
+    </div>
+</body>
+
 </html>
