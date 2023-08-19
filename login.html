@@ -2,8 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
@@ -24,8 +22,9 @@ section{
     background: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.459);
     border-radius: 10px;
-    padding: 15px;
-    width: 500px;
+    padding: 3vw;
+    padding-right: 0;
+    width: 70vw;
     margin: auto;
     margin-top: 6vh;
 }
@@ -35,6 +34,7 @@ section{
 .button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
 .button:active {box-shadow: 0 1px black; transform: translateY(1px);
 }
+#mensagem {margin-top: 6vh;}
     </style>
 </head>
 <body>
@@ -43,17 +43,18 @@ section{
         <h2>Entrar</h2>
         <div>
             <p id="email">
-               E-mail: <input type="text" name="txtnome" id="txtnome" style="width: 200px;">
+               E-mail: <input type="text" name="txtnome" id="txtnome" style="width: 36vw;">
             </p>
             <p>
-                Senha: <input type="text" name="txtsenha" id="txtsenha" style="width: 200px;">
+                Senha: <input type="text" name="txtsenha" id="txtsenha" style="width: 22vw;">
                 <button onclick="Entrar()" class="button">Entrar</button>
             </p>
-            <p>Ainda não possui uma conta?
-                <a href="cadastro.html" class="button">Criar Conta</a>
+            <p id="mensagem">Ainda não possui uma conta?
+                <a href="cadastro.html" class="button">Cadastre-se</a>
             </p
         </div>
     </section>
     </footer>
     <script src="file:///C:/Users/William/Desktop/script.js"></script>
-</body></html>
+</body>
+</html>
