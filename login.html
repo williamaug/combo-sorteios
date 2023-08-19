@@ -13,7 +13,7 @@ body{
 }
 
 h1 {
-    font: bold 10vh "Raleway", sans-serif; color: white; text-align: center; text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
+    font: bold 5rem "Raleway", sans-serif; color: white; text-align: center; text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
 }
 
 i {margin-right: .5vw;}
@@ -24,17 +24,18 @@ section{
     border-radius: 10px;
     padding: 3vw;
     padding-right: 0;
-    width: 70vw;
+    width: 90%;
+    max-width: 600px;
     margin: auto;
     margin-top: 6vh;
 }
 
 .button {
-    margin-left: 1vw; font: 3vh "Raleway", sans-serif; text-decoration: none; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: 1.5vh 2.5vw; opacity: 0.9; transition-duration: 0.3s;}
+    margin-left: 1vw; font: 1em "Raleway", sans-serif; text-decoration: none; max-width: 30%; min-height: 3vh; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: .5vw 1vw; opacity: 0.9; transition-duration: 0.3s;}
 .button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
 .button:active {box-shadow: 0 1px black; transform: translateY(1px);
 }
-#mensagem {margin-top: 6vh;}
+#mensagem {margin-top: 30px;}
     </style>
 </head>
 <body>
@@ -43,18 +44,18 @@ section{
         <h2>Entrar</h2>
         <div>
             <p id="email">
-               E-mail: <input type="text" name="txtnome" id="txtnome" style="width: 36vw;">
+               E-mail: <input type="text" id="txtemail" style="width: 36vw; max-width: 260px; min-height: 3vh;">
             </p>
-            <p>
-                Senha: <input type="text" name="txtsenha" id="txtsenha" style="width: 22vw;">
+            <p id="senha">
+                Senha: <input type="text" name="txtsenha" id="txtsenha" style="width: 22vw; max-width: 160px; min-height: 3vh;">
                 <button onclick="Entrar()" class="button">Entrar</button>
             </p>
             <p id="mensagem">Ainda não possui uma conta?
                 <a href="cadastro.html" class="button">Cadastre-se</a>
-            </p
+            </p>
         </div>
     </section>
     </footer>
-    <script src="file:///C:/Users/William/Desktop/script.js"></script>
+    <script src=""></script>
 </body>
 </html>
