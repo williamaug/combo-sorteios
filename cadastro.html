@@ -39,16 +39,19 @@ section{
 .button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
 .button:active {box-shadow: 0 1px black; transform: translateY(1px);
 }
-        
+
+.required {color: red;}
+
 #mensagem {margin-top: 30px;}
 
 #paginic {display: inline-block; margin-top: 5%; padding: 1vw, 0;}
+
     </style>
 </head>
 <body>
     <h1><i>Combo</i> Sorteios</h1>
     <section>
-        <div>
+        <form>
             <h2>Cadastro</h2>
             <p id="nome">
                Nome: <input type="text" name="txtnome" class="input">
@@ -69,7 +72,7 @@ section{
             <p id="mensagem">Já possui uma conta?
                 <a href="login.html" class="button">Entrar</a>
             </p>
-        </div>
+        </form>
     </section>
     <a href="index.html" class="button" id="paginic">Voltar ao início</a>
     <script src=""></script>
