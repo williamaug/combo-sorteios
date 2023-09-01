@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="favicon.svg">
     <title>Entrar</title>
     <style>
 
@@ -41,7 +42,8 @@ section{
 .button:active {box-shadow: 0 1px black; transform: translateY(1px);
 }
 #mensagem {margin-top: 30px;}
-#paginic {display: inline-block; margin-top: 5%; padding: 1vw, 0;}
+#paginic {display: inline-block; margin-top: 5%;}
+#esquerda {text-align: left; display: inline-block;}
     </style>
 </head>
 <body>
@@ -49,13 +51,15 @@ section{
     <section>
         <div>
             <h2>Entrar</h2>
+			<div id="esquerda">
             <p id="email">
-               E-mail: <input type="email" name="txtemail" style="width: 36vw; max-width: 270px; min-height: min(2vh, 2vw);">
+               E-mail: <input type="email" name="txtemail" style="width: 36vw; max-width: 290px; min-height: 2vh;">
             </p>
             <p id="senha">
-                Senha: <input type="password" name="txtsenha" style="width: 24vw; max-width: 180px; min-height: min(2vh,  2vw);">
+                Senha: <input type="password" name="txtsenha" style="width: 24vw; max-width: 180px; min-height: 2vh;">
                 <button onclick="Entrar()" class="button">Entrar</button>
             </p>
+			</div>
             <p id="mensagem">Ainda não possui uma conta?
                 <a href="cadastro.html" class="button">Cadastre-se</a>
             </p>
