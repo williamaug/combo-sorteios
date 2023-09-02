@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
     <title>Cadastro</title>
     <style>
 body{
@@ -18,7 +19,7 @@ h1 {
 }
 
 h2 {
-	margin: min(1vh, 1vw) 0 min(4vh, 4vw);
+	margin: min(1vh, 1vw) 0 min(2vh, 2vw);
 }
 
 i {margin-right: .5vw;}
@@ -34,6 +35,11 @@ section{
     margin-top: 6vh;
 }
 
+form {
+	display: inline-block;
+	text-align: left;
+}
+
 .button {
     margin-left: 1vw; font: 1em "Raleway", sans-serif; text-decoration: none; max-width: 30%; min-height: 1.5vh; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: .5vw 1vw; opacity: 0.9; transition-duration: 0.3s;}
 .button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
@@ -42,37 +48,48 @@ section{
 
 .required {color: red;}
 
+.input {width: 100%;}
+
+.checkbox {
+	margin-left: min(1.5vw, 1.5vh);
+	transform: scale(1.8);
+}
+
 #mensagem {margin-top: 30px;}
 
-#paginic {display: inline-block; margin-top: 5%; padding: 1vw, 0;}
+#paginic {display: inline-block; margin-top: 3%; padding: 1vw, 0;}
 
     </style>
 </head>
 <body>
     <h1><i>Combo</i> Sorteios</h1>
     <section>
+		<div>
+		<h2>Cadastro</h2>
         <form>
-            <h2>Cadastro</h2>
             <p id="nome">
-               Nome: <input type="text" name="txtnome" class="input">
+               Nome: <input type="text" name="inputnome" class="input">
             </p>
             <p id="idade">
                 Você é maior de idade (18+)?
-                <input type="checkbox" name="checkidade">
+                <input type="checkbox" class="checkbox" name="checkidade">
             </p>
+			<p class="required" id="documento">
+				RG/CPF: <input type="text" name="inputdocumento" class="input" required>
             <p class="required" id="email">
                 E-mail:
-                <input type="email" name="txtemail" class="input" required>
+                <input type="email" name="inputemail" class="input" required>
             </p>
             <p class="required" id="senha" required="true">
                 Senha:
-                <input type="password" name="txtsenha" class="input" required>
-            </p>
-            <button onclick="Cadastrar()" class="button" >Cadastrar-se</button>
-            <p id="mensagem">Já possui uma conta?
-                <a href="login.html" class="button">Entrar</a>
+                <input type="password" name="inputsenha" class="input" required>
             </p>
         </form>
+		</div>
+        <button onclick="Cadastrar()" class="button" >Cadastrar-se</button>
+        <p id="mensagem">Já possui uma conta?
+            <a href="login.html" class="button">Entrar</a>
+        </p>
     </section>
     <a href="index.html" class="button" id="paginic">Voltar ao início</a>
     <script src=""></script>
