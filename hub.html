@@ -9,37 +9,60 @@
     <title>Seus Sorteios</title>
     <style>
     body {
-    background: fixed radial-gradient(white, limegreen);
     font: 15pt "Raleway", sans-serif;
     text-align: center;
+	margin: 0;
+	overflow: auto;
     }
     
     header {
-    background: linear-gradient(green, white);
+    background: linear-gradient(green, lightgreen);
+	padding: 1em;
     }
     
     h1 {
-    font: bold 3rem "Raleway", sans-serif; color: white; text-align: center; text-shadow: 2px 3px 3px green, 4px 4px 18px #004469; display: inline;
+    font: bold 3rem "Raleway", sans-serif; color: white; text-align: center; text-shadow: 2px 3px 3px green, 4px 4px 18px darkgreen; display: inline;
     }
-    
-    #usuario {
+	
+	h2 {
+    color: white; text-shadow: 2px 3px 3px green, 4px 4px 18px darkgreen;
+    }
+	
+	section {
+	flex: 1;
+	background: fixed radial-gradient(white, limegreen);
+	border: solid 2px black;
+	}
+	
+	.button {
+		margin-left: 1vw; font: 1em "Raleway", sans-serif; text-decoration: none; max-width: 30%; min-height: 1.5vh; background-color: green; color: white; border: 2px solid darkgreen; border-radius: 6px; padding: .5vw 1vw; opacity: 0.9; transition-duration: 0.3s;}
+	.button:hover {opacity: 1; box-shadow: 0 6px 8px darkgreen;}
+	.button:active {box-shadow: 0 1px black; transform: translateY(1px);
+	}
+	
+    .botao-topo {
     display: inline-block;
     width: 18vw;
     text-align: center;
     position: absolute;
-    right: 2vw;
-    background-color: white;
-    } 
+    }
+	
+	#colunas {display: flex;}
 </style>
 </head>
 <body>
     <header>
         <h1>Seus Sorteios</h1>
-        <div id="usuario">
-            <label>Informações do Usuário</label>
-        </div>
+		<a class="button botao-topo" href="index.html" style="left: 3vw;"> Voltar à Página Inicial</a>
+        <a class="button botao-topo" href="usuario.html" style="right: 3vw;"> Informações do Usuário </a>
     </header>
-  <a href="usuario.html">Página de usuário</a>
-  <a href="login.html">Página de entrada</a>
+	<div id="colunas">
+	<section>
+	<h2>Administrador</h2>
+	</section>
+	<section>
+	<h2>Participante</h2>
+	</section>
+	</div>
 </body>
 </html>
