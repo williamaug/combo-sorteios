@@ -18,10 +18,9 @@
 
         header {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
             background: linear-gradient(#009847, #6FFFB2);
-            padding: 0;
             border-bottom: solid 2px #6FFFB2;
             height: 10%;
         }
@@ -40,7 +39,7 @@
         .button {
             font: 1em "Raleway", sans-serif;
             text-decoration: none;
-            max-width: 30%;
+            max-width: 17%;
             min-height: 1.5vh;
             background-color: #009847;
             color: white;
@@ -49,6 +48,8 @@
             padding: .5vw 1vw;
             opacity: 0.9;
             transition-duration: 0.3s;
+            margin: min(1vw, 1vh) min(1vh, 1vw);
+			overflow: auto;
         }
 
         .button:hover {
@@ -62,8 +63,6 @@
         }
 
         .botao-topo {
-            text-align: center;
-            margin: min(1vw, 1vh) min(2vh, 2vw);
         }
 
         .colunas {
@@ -79,25 +78,104 @@
             flex: 1;
             height: 100vh;
             background: radial-gradient(#A2FFCD, #6FFFB2, #00FF76, #00FF76);
+			border-top: solid 0.3em #009847;
+			overflow: auto;
         }
+		
+		.caixa {
+			flex: 0.8;
+			flex-flow: row wrap;
+		}
 
         #topo-separador {
             flex: 0.01;
             background: linear-gradient(#6FFFB2, #00FF76, #009847);
         }
 
-        #-separador {
+        #separador {
             flex: 0.01;
             background-color: #009847;
+        }
+		
+		#casa {
+            overflow: hidden;
+            font-size: min(1vw, 1vh);
+            margin: 0.5em auto;
+            height: 5em;
+            width: 6em;
+            background: none;
+        }
+
+        #casa::before {
+            content: " ";
+            display: block;
+            height: 1em;
+            width: 5em;
+            background-color: white;
+            position: relative;
+            left: 1em;
+            top: 2em;
+        }
+
+        #casa::after {
+            content: " ";
+            display: block;
+            height: 2em;
+            width: 2em;
+            position: relative;
+            left: 0.8em;
+			border-left: 1em solid white;
+			border-top: 1em solid white;
+			transform: rotate(-45deg);
+        }
+		
+		#avatar {
+            overflow: hidden;
+            font-size: min(1vw, 1vh);
+            margin: 0.5em auto;
+            border: 4px dashed white;
+            border-radius: 2em;
+            height: 6em;
+            width: 6em;
+            background: none;
+        }
+
+        #avatar::before {
+            content: " ";
+            display: block;
+            height: 2em;
+            width: 2em;
+            background: white;
+            position: relative;
+            left: 2em;
+            top: 0.8em;
+            border-radius: 2em;
+        }
+
+        #avatar::after {
+            content: " ";
+            display: block;
+            height: 2em;
+            width: 4em;
+            background: white;
+            position: relative;
+            left: 1em;
+            top: 1em;
+            border-radius: 2em 2em 0 0;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <a class="button botao-topo" href="index.html"> Voltar à Página Inicial</a>
+        <a class="button botao-topo" href="index.html"> Voltar à Página Inicial
+		<div id="casa"></div>
+		</a>
         <h1>Seus Sorteios</h1>
-        <a class="button botao-topo" href="usuario.html"> Informações do Usuário </a>
+        <a class="button botao-topo" href="usuario.html"> Informações do Usuário
+		<div id="avatar"></div>
+		</a>
+		
     </header>
     <div class="colunas">
         <section class="topo-colunas">
@@ -109,10 +187,15 @@
         </section>
     </div>
     <div class="colunas">
-        <section class="lado"></section>
+        <section class="lado">
+		
+		</section>
         <div id="separador"></div>
-        <section class="lado"></section>
+        <section class="lado">
+		
+		</section>
     </div>
+	<footer></footer>
 </body>
 
 </html>
