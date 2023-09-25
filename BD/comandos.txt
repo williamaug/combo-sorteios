@@ -1,0 +1,30 @@
+CREATE DATABASE combo;
+
+USE combo;
+
+CREATE TABLE usuario (
+    nome_usuario VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    documento VARCHAR(18) NOT NULL PRIMARY KEY,
+    senha CHAR(128) NOT NULL,
+    maioridade BIT(1)
+);
+
+CREATE TABLE sorteio (
+    id_sorteio INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome_sorteio VARCHAR(255),
+    maximo_participantes INT UNSIGNED,
+    restricao_maioridade BIT(1),
+    administrador VARCHAR(18) NOT NULL,
+    data DATE NOT NULL,
+    formato VARCHAR(10) NOT NULL,
+    FOREIGN KEY (administrador) REFERENCES usuario(documento)
+);
+
+CREATE TABLE inscricao (
+    id_inscricao INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_sorteio INT UNSIGNED NOT NULL,
+    documento_participante VARCHAR(18) NOT NULL,
+    FOREIGN KEY (id_sorteio) REFERENCES sorteio(id_sorteio),
+    FOREIGN KEY (documento_participante) REFERENCES usuario(documento)
+);
