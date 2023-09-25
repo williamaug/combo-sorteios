@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
-	<link rel="icon" type="image/x-icon" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.svg">
     <title>Sorteio</title>
     <style>
         body {
             background: fixed radial-gradient(#AFB6FF, #828EFF, #2237FF);
-            font: 15pt "Raleway", sans-serif;
+            font: 12pt "Raleway", sans-serif;
             text-align: center;
         }
 
@@ -36,16 +36,15 @@
             margin: 2vw;
             overflow: auto;
         }
-        
-		label {
-			text-shadow: 0px 0px 1px black;
-			margin-right: 6px;
-		}
 
-		p {
-			margin: 1vw 1vh;
-		}
-		
+        label {
+            text-shadow: 0px 0px 1px black;
+        }
+
+        p {
+            margin: max(2vw, 2vh);
+        }
+
         .button {
             display: inline-block;
             font: 1em "Raleway", sans-serif;
@@ -59,7 +58,7 @@
             transition-duration: 0.3s;
             padding: .5vw 1vw;
         }
-        
+
         .button:hover {
             opacity: 1;
             box-shadow: 0 6px 8px #004469;
@@ -68,41 +67,6 @@
         .button:active {
             box-shadow: 0 1px black;
             transform: translateY(1px);
-        }
-
-        #icone {
-            overflow: hidden;
-            font-size: min(5vw, 5vh);
-            margin: 1em auto;
-            border: 4px dashed gray;
-            border-radius: 2em;
-            height: 6em;
-            width: 6em;
-            background: none;
-        }
-
-        #icone::before {
-            content: " ";
-            display: block;
-            height: 2em;
-            width: 2em;
-            background: gray;
-            position: relative;
-            left: 2em;
-            top: 0.8em;
-            border-radius: 2em;
-        }
-
-        #icone::after {
-            content: " ";
-            display: block;
-            height: 2em;
-            width: 4em;
-            background: gray;
-            position: relative;
-            left: 1em;
-            top: 1em;
-            border-radius: 2em 2em 0 0;
         }
 
         #info {
@@ -119,22 +83,26 @@
         #voltar {
             margin-top: min(8%, 40px);
             margin-bottom: min(10%, 60px);
-            text-decoration: none;
         }
     </style>
 </head>
 
 <body>
-    <h1>Usuário</h1>
+    <h1>Sorteio</h1>
     <div id="info">
         <div id="icone"></div>
         <section>
-            <label>Data: </label><p>31/12/2024</p>
-            <label>Contato: </label><p>fulanodetal@email.exemplo</p>
-            <label>Formato: </label><p>Digital</p>
-			<label>Apenas para maiores de idade? </label><p>Não</p>
+            <label>Nome: </label>
+            <p>Exemplo A</p>
+            <label>Data: </label>
+            <p>31/12/2024</p>
+            <label>Contato: </label>
+            <p>fulanodetal@email.exemplo</p>
+            <label>Formato: </label>
+            <p>Digital</p>
+            <label>Apenas para maiores de idade? </label>
+            <p>Não</p>
         </section>
-        <button class="button" id="editar">Editar perfil</button>
     </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
