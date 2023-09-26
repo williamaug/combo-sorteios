@@ -1,0 +1,41 @@
+    <style>
+
+body{
+    background: fixed radial-gradient(#AFB6FF, #828EFF, #2237FF);
+    font: 15pt "Raleway", sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font: bold 5rem "Raleway", sans-serif; color: white; text-align: center; text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
+}
+
+h2 {
+	margin: min(1vh, 1vw) 0 min(4vh, 4vw);
+}
+
+i {margin-right: .5vw;}
+
+section{
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.459);
+    border-radius: 10px;
+    padding: min(5vh, 5vw) 0;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 6vh;
+}
+
+.button {
+    margin-left: 1vw; font: 1em "Raleway", sans-serif; text-decoration: none; max-width: 30%; min-height: 1.5vh; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: .5vw 1vw; opacity: 0.9; transition-duration: 0.3s;}
+.button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
+.button:active {box-shadow: 0 1px black; transform: translateY(1px);
+}
+    
+#mensagem {margin-top: 30px;}
+
+#paginic {display: inline-block; margin: 3% 0; padding: 1vw, 0;}
+
+#esquerda {text-align: left; display: inline-block;}
+    </style>
