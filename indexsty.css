@@ -1,0 +1,88 @@
+ <style>
+        html {
+	    width: 100%;
+	    height: 100%;
+	}
+		
+        body {
+            background: fixed radial-gradient(#A7E0FF, #76CFFF, #0DAAFF) no-repeat center;
+            text-align: center;
+        }
+
+        h1 {
+            font: bold max(5rem, 6vh) "Raleway", sans-serif;
+            color: white;
+            text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
+            margin: 0;
+        }
+
+        h3 {
+            font: 1.8rem "Raleway", sans-serif;
+            color: #004469;
+            text-shadow: 0 0 2px #000E95;
+            margin-bottom: max(2vh, 4vw);
+        }
+
+        p {
+            font: 1.3rem "Raleway", sans-serif;
+            color: #004469;
+            text-shadow: 0 0 2px #000E95;
+            margin-top: -1vh;
+        }
+
+        section {
+            position: relative;
+			margin: auto;
+            max-width: 60%;
+        }
+
+        .button {
+	    display: inline-block;
+	    text-decoration: none;
+            max-width: max(20vw, 30vh);
+            margin-top: min(1vh, 1vw);
+            margin-bottom: min(6vh, 6vw);
+            font: min(3rem, 4vh) "Raleway", sans-serif;
+            background-color: #000E95;
+            color: white;
+            border: 2px solid #000B72;
+            border-radius: 6px;
+            padding: .5vw 1vw;
+            opacity: 0.9;
+            transition-duration: 0.3s;
+        }
+
+        .button:hover {
+            opacity: 1;
+            box-shadow: 0 6px 8px #004469;
+        }
+
+        .button:active {
+            box-shadow: 0 1px black;
+            transform: translateY( 1px);
+        }
+
+	.p-botoes {
+            font-size: min(2rem, 4vh);
+        }
+
+        #fade {
+            background: linear-gradient(transparent, white 30%, white 70%, transparent);
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: min(100vh, 80vw);
+			display: flex;
+        }
+
+        #titulo1 {
+            margin-top: min(10vh, 10vw);
+            font-style: italic;
+        }
+
+        #titulo2 {
+            margin-top: -1vh;
+            margin-bottom: min(18vh, 18vw);
+            text-decoration: dashed 14px underline;
+        }
+    </style>
