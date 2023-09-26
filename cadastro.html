@@ -7,58 +7,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.svg">
     <title>Cadastro</title>
-    <style>
-body{
-    background: fixed radial-gradient(#AFB6FF, #828EFF, #2237FF);
-    font: 15pt "Raleway", sans-serif;
-    text-align: center;
-}
-
-h1 {
-    font: bold 5rem "Raleway", sans-serif; color: white; text-align: center; text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
-}
-
-h2 {
-	margin: min(1vh, 1vw) 0 min(2vh, 2vw);
-}
-
-i {margin-right: .5vw;}
-
-section{
-    background: white;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.459);
-    border-radius: 10px;
-    padding: min(5vh, 5vw) 0;
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 6vh;
-}
-
-form {
-	display: inline-block;
-	text-align: left;
-}
-
-.button {
-    margin-left: 1vw; font: 1em "Raleway", sans-serif; text-decoration: none; max-width: 30%; min-height: 1.5vh; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: .5vw 1vw; opacity: 0.9; transition-duration: 0.3s;}
-.button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
-.button:active {box-shadow: 0 1px black; transform: translateY(1px);
-}
-
-.required {color: red;}
-
-.input {width: 100%;}
-
-.checkbox {
-	margin-left: min(1.5vw, 1.5vh);
-	transform: scale(1.8);
-}
-
-#mensagem {margin-top: 30px;}
-
-#paginic {display: inline-block; margin: 3% 0; padding: 1vw, 0;}
 <link rel="stylesheet" href="cadastrosty.css">
+</head>
+<body>
+    <h1><i>Combo</i> Sorteios</h1>
+    <section>
+		<div>
+		<h2>Cadastro</h2>
+        <form>
+            <p id="nome">
+               Nome: <input type="text" name="inputnome" class="input">
+            </p>
+            <p id="idade">
+                Você é maior de idade (18+)?
+                <input type="checkbox" class="checkbox" name="checkidade">
+            </p>
+			<p class="required" id="documento">
+				CPF/CNPJ: <input type="text" name="inputdocumento" class="input" required>
+            <p class="required" id="email">
+                E-mail:
+                <input type="email" name="inputemail" class="input" required>
+            </p>
+            <p class="required" id="senha" required="true">
+                Senha:
+                <input type="password" name="inputsenha" class="input" required>
+            </p>
+        </form>
+		</div>
+        <a onclick="Cadastrar()" class="button" >Cadastrar-se</a>
+        <p id="mensagem">Já possui uma conta?
+            <a href="login.html" class="button">Entrar</a>
+        </p>
+    </section>
     <a href="index.html" class="button" id="paginic">Voltar ao início</a>
     <script src=""></script>
 </body>
