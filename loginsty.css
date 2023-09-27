@@ -37,3 +37,7 @@ section{
 #paginic {display: inline-block; margin: 3% 0; padding: 1vw, 0;}
 
 #esquerda {text-align: left; display: inline-block;}
+
+#inputemail {width: 36vw; max-width: 290px; min-height: min(2vh, 2vw);}
+
+#inputsenha {width: 24vw; max-width: 180px; min-height: min(2vh, 2vw);}

@@ -1,6 +1,7 @@
-        body {
+
+      body {
             background: fixed radial-gradient(#AFB6FF, #828EFF, #2237FF);
-            font: 15pt "Raleway", sans-serif;
+            font: 12pt "Raleway", sans-serif;
             text-align: center;
         }
 
@@ -23,16 +24,30 @@
             margin: 2vw;
             overflow: auto;
         }
-        
-		label {
-			text-shadow: 0px 0px 1px black;
-			margin-right: 6px;
-		}
-
-		p {
-			margin: 1vw 1vh;
+		
+	input {margin-left: 0.5em;}
+		
+        .mainlabel {
+            text-shadow: 0px 0px 1px black;
+        }
+		
+		.labelradio {
+			font-weight: normal;
 		}
 		
+		.atributo {
+			margin-bottom: 1em;
+		}
+		
+		.required {color: red;}
+
+		.input {width: 80%;}
+
+		.check {
+			margin-left: min(1.5vw, 1.5vh);
+			transform: scale(1.8);
+		}
+
         .button {
             display: inline-block;
             font: 1em "Raleway", sans-serif;
@@ -46,7 +61,7 @@
             transition-duration: 0.3s;
             padding: .5vw 1vw;
         }
-        
+
         .button:hover {
             opacity: 1;
             box-shadow: 0 6px 8px #004469;
@@ -55,41 +70,6 @@
         .button:active {
             box-shadow: 0 1px black;
             transform: translateY(1px);
-        }
-
-        #icone {
-            overflow: hidden;
-            font-size: min(4vw, 4vh);
-            margin: 1em auto;
-            border: 4px dashed gray;
-            border-radius: 2em;
-            height: 6em;
-            width: 6em;
-            background: none;
-        }
-
-        #icone::before {
-            content: " ";
-            display: block;
-            height: 2em;
-            width: 2em;
-            background: gray;
-            position: relative;
-            left: 2em;
-            top: 0.8em;
-            border-radius: 2em;
-        }
-
-        #icone::after {
-            content: " ";
-            display: block;
-            height: 2em;
-            width: 4em;
-            background: gray;
-            position: relative;
-            left: 1em;
-            top: 1em;
-            border-radius: 2em 2em 0 0;
         }
 
         #info {
@@ -106,5 +86,4 @@
         #voltar {
             margin-top: min(8%, 40px);
             margin-bottom: min(10%, 60px);
-            text-decoration: none;
         }
