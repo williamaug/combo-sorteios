@@ -96,6 +96,7 @@
 		
 		.trevo {
 			display: inline-block;
+			height: 4vw;
 			width: 4vw;
 			opacity: 0.5;
 		}
