@@ -17,7 +17,7 @@
 		
 		label {
 			color: #009847;
-			text-shadow: 1px 1px 10px #00FF76;
+			text-shadow: 0px 0px 2px #009847, 0 0 10px white;
 			font-weight: bold;
 			display: block;
 			margin: 0.5em 0 1.5em;}
@@ -32,6 +32,8 @@
             color: white;
             text-shadow: 2px 3px 3px #009847, 4px 4px 18px #007536;
         }
+		
+		.novo {text-decoration: dotted #007536 0.2em underline overline;}
 
         .button {
             font: 1em "Raleway", sans-serif;
@@ -78,15 +80,28 @@
 		
 		.caixa {
 			flex: 0.8;
-			flex-flow: row wrap;
+			flex-wrap: wrap;
 			border: 0.4em rgb(0, 225, 118, 0.8) outset;
 			border-radius: 1em;
 			margin: max(2vh, 2vw);
 			padding: max(2vh, 2vw);
-			height: min(15vh, 25vw);
-			background: linear-gradient(#A2FFCD, #6FFFB2);
+			height: min(15vh, 15vw);
+			background-image: linear-gradient(#A2FFCD, #6FFFB2);
+			overflow: auto;
 		}
-
+		
+		.alinhar {
+			display: inline-block;
+		}
+		
+		.trevo {
+			display: inline-block;
+			width: 4vw;
+			opacity: 0.5;
+		}
+		
+		.esquerdo {transform: scaleX(-1);}
+		
         #topo-separador {
             flex: 0.01;
             background: linear-gradient(#6FFFB2, #00FF76, #009847);
@@ -97,7 +112,7 @@
             background: linear-gradient(#009847, #00FF76, #00FF76);
         }
 		
-		#casa {
+		#voltar {
             overflow: hidden;
             font-size: min(1vw, 1vh);
             margin: 0.5em auto;
@@ -106,7 +121,7 @@
             background: none;
         }
 
-        #casa::before {
+        #voltar::before {
             content: " ";
             display: block;
             height: 1em;
@@ -117,7 +132,7 @@
             top: 2em;
         }
 
-        #casa::after {
+        #voltar::after {
             content: " ";
             display: block;
             height: 2em;
