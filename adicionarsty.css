@@ -1,0 +1,73 @@
+
+      body {
+            background: fixed radial-gradient(#AFB6FF, #828EFF, #2237FF);
+            font: 12pt "Raleway", sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+            margin: min(5vw, 5vh);
+            font: bold 4rem "Raleway", sans-serif;
+            text-shadow: 2px 3px 3px #000B72, 4px 4px 18px #004469;
+        }
+
+        footer {
+            color: white;
+            text-shadow: 1px 2px 2px #004469;
+            bottom: 0;
+            margin-bottom: min(1vh, 1vw);
+        }
+
+        section {
+            text-align: left;
+            margin: 2vw;
+            overflow: auto;
+        }
+		
+		input {width: 98%;}
+		
+		.required {
+			color: red;
+            text-shadow: 0px 0px 1px red;
+        }
+
+        .button {
+            display: inline-block;
+            font: 1em "Raleway", sans-serif;
+            text-decoration: none;
+            min-height: 1.5vh;
+            background-color: #000E95;
+            color: white;
+            border: 2px solid #000B72;
+            border-radius: 6px;
+            opacity: 0.9;
+            transition-duration: 0.3s;
+            padding: .5vw 1vw;
+        }
+
+        .button:hover {
+            opacity: 1;
+            box-shadow: 0 6px 8px #004469;
+        }
+
+        .button:active {
+            box-shadow: 0 1px black;
+            transform: translateY(1px);
+        }
+
+        #info {
+            background: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            padding: min(3vh, 3vw) min(2vw, 2vh);
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1.2em;
+        }
+
+        #voltar {
+            margin-top: min(8%, 40px);
+            margin-bottom: min(10%, 60px);
+        }
