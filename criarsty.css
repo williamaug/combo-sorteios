@@ -83,6 +83,16 @@
             font-size: 1.2em;
         }
 
+        #divradio {
+			display: block;
+			margin-top: 1em;
+        }
+		
+		#maiores {
+			display: inline-block;
+			margin-bottom: 1em;
+		}
+
         #voltar {
             margin-top: min(8%, 40px);
             margin-bottom: min(10%, 60px);
