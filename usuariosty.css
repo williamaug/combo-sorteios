@@ -59,7 +59,7 @@
 
         #icone {
             overflow: hidden;
-            font-size: min(5vw, 5vh);
+            font-size: min(4vw, 4vh);
             margin: 1em auto;
             border: 4px dashed gray;
             border-radius: 2em;
