@@ -48,6 +48,11 @@
 			transform: scale(1.8);
 		}
 
+        .espaco {
+			display: inline-block;
+			margin-bottom: 1em;
+		}
+
         .button {
             display: inline-block;
             font: 1em "Raleway", sans-serif;
@@ -87,3 +92,7 @@
             margin-top: min(8%, 40px);
             margin-bottom: min(10%, 60px);
         }
+		
+		#divradio {
+			display: block;
+		}
