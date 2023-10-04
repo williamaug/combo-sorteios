@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.svg">
-    <title>Criar Sorteio</title>
+    <title>Combo Sorteios</title>
     <link rel="stylesheet" href="criarsty.css">
 </head>
 <body>
@@ -19,17 +19,19 @@
         <section>
 		<div class="atributo">
             <label class="mainlabel">Nome: </label>
-            <input type="text" name="inputnome" class="input">
+            <input type="text" name="inputnome" id="inputnome">
 		</div>
 		<div class="atributo">
             <label class="mainlabel required">Data: </label>
-            <input type="date" name="inputdata" class="data" required>
+            <input type="date" name="inputdata" id="data" required>
 		</div>
 		<div class="atributo">
             <label class="mainlabel required espaco">Formato: </label>
 			<div id="divradio">
-            <input type="radio" id="digital" name="inputformato" value="digital" class="check" required>
-			<label for="digital" class="labelradio">Digital</label>
+				<div id="divdigital">
+				<input type="radio" id="digital" name="inputformato" value="digital" class="check" required>
+				<label for="digital" class="labelradio">Digital</label>
+				</div>
 			<input type="radio" id="presencial" name="inputformato" value="presencial" class="check" required>
 			<label for="presencial" class="labelradio">Presencial</label>
 			</div>
