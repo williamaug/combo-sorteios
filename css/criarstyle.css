@@ -37,7 +37,7 @@
 }
  .check {
      margin-left: min(3vw, 1.5vh);
-     transform: scale(1.6);
+     transform: scale(1.4);
 }
  .espaco {
      display: inline-block;
