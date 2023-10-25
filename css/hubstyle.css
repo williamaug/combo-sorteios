@@ -1,4 +1,3 @@
-
         body {
             font: 15pt "Raleway", sans-serif;
             text-align: center;
@@ -15,12 +14,12 @@
             height: 10%;
         }
 		
-		label {
-			color: #009847;
-			text-shadow: 0px 0px 2px #009847, 0 0 10px white;
-			font-weight: bold;
-			display: block;
-			margin: 0.5em 0 1.5em;}
+	label {
+		color: #009847;
+		text-shadow: 0px 0px 2px #009847, 0 0 10px white;
+		font-weight: bold;
+		display: block;
+		margin: 0.5em 0 1.5em;}
 
         h1 {
             font: bold 4rem "Raleway", sans-serif;
@@ -78,30 +77,30 @@
 			overflow: auto;
         }
 		
-		.caixa {
-			flex: 0.8;
-			flex-wrap: wrap;
-			border: 0.4em rgb(0, 225, 118, 0.8) outset;
-			border-radius: 1em;
-			margin: max(2vh, 2vw);
-			padding: max(2vh, 2vw);
-			height: min(15vh, 15vw);
-			background-image: linear-gradient(#A2FFCD, #6FFFB2);
-			overflow: auto;
-		}
+	.caixa {
+		flex: 0.8;
+		flex-wrap: wrap;
+		border: 0.4em rgb(0, 225, 118, 0.8) outset;
+		border-radius: 1em;
+		margin: max(2vh, 2vw);
+		padding: max(2vh, 2vw);
+		height: min(15vh, 15vw);
+		background-image: linear-gradient(#A2FFCD, #6FFFB2);
+		overflow: auto;
+	}
 		
-		.alinhar {
-			display: inline-block;
-		}
+	.alinhar {
+		display: inline-block;
+	}
 		
-		.trevo {
-			display: inline-block;
-			height: 4vw;
-			width: 4vw;
-			opacity: 0.5;
-		}
+	.trevo {
+		display: inline-block;
+		height: 4vw;
+		width: 4vw;
+		opacity: 0.5;
+	}
 		
-		.esquerdo {transform: scaleX(-1);}
+	.esquerdo {transform: scaleX(-1);}
 		
         #topo-separador {
             flex: 0.01;
