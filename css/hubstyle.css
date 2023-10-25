@@ -98,7 +98,7 @@
 		height: 4vw;
 		width: 4vw;
 		opacity: 0.5;
-		content: url("..imagens/shamrock.svg");
+		background-image: url("..imagens/shamrock.svg");
 	}
 		
 	.esquerdo {transform: scaleX(-1);}
