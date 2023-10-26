@@ -32,7 +32,11 @@
             text-shadow: 2px 3px 3px #009847, 4px 4px 18px #007536;
         }
 		
-		.novo {text-decoration: dotted #007536 0.2em underline overline;}
+	.novo {
+		color: white;
+		text-shadow: 1px 2px 2px #009847, 3px 3px 9px #007536;
+		text-decoration: dotted #007536 0.2em underline overline;
+	}
 
         .button {
             font: 1em "Raleway", sans-serif;
@@ -144,7 +148,7 @@
 			transform: rotate(-45deg);
         }
 		
-		#avatar {
+	#avatar {
             overflow: hidden;
             font-size: min(1vw, 1vh);
             margin: 0.5em auto;
