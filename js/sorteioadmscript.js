@@ -17,7 +17,7 @@ function rolar() {
     var q = quan.value
     while(c < q){
         var l = lim.value
-        const numeroAleatorio = Math.floor(Math.random() * l);
+        const numeroAleatorio = Math.floor(Math.random() * l+1);
         rol.innerHTML += `<p>${numeroAleatorio}</p>`
         c = c + 1
     }
