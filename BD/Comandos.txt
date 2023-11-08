@@ -1,12 +1,11 @@
 CREATE DATABASE IF NOT EXISTS combo CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-
 USE combo;
 
 CREATE TABLE IF NOT EXISTS usuario (
     nome_usuario VARCHAR(255),
     email VARCHAR(255) NOT NULL,
     documento VARCHAR(18) NOT NULL PRIMARY KEY,
-    senha CHAR(128) NOT NULL,
+    senha CHAR(60) NOT NULL,
     maioridade BIT(1)
 );
 
