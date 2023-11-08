@@ -10,33 +10,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg">
     <title>Combo Sorteios</title>
-    <link rel="stylesheet" href="../css/sorteioadmstyle.css">
+    <link rel="stylesheet" href="../css/usuariostyle.css">
 </head>
+
 <body>
-    <h1>Gerenciar Sorteio</h1>
+    <h1>Usuário</h1>
     <div id="info">
         <div id="icone"></div>
         <section>
-            <label>ID: </label>
-            <p>91742</p>
-            <label>Nome: </label>
-            <p>Exemplo 1</p>
-            <label>Data: </label>
-            <p>10/06/2024</p>
-            <label>Formato: </label>
-            <p id="form">Digital</p>
-            <label>Apenas para maiores de idade? </label>
-            <p>Sim</p>
-            <div id="especif"></div>
-            <div id="roleta"></div>
+            <label>Nome: </label><p>Fulano de Tal</p>
+            <label>E-mail: </label><p>fulanodetal@email.exemplo</p>
+            <label>CPF/CNPJ: </label><p>123.456.789-01</p>
+			<label>Maior de idade? </label><p>Sim</p>
         </section>
-        <button class="button" id="editar">Editar Sorteio</button>
+        <button class="button" id="editar">Editar perfil</button>
     </div>
-    <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
+    <a href="hub.php" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-    <script src="../js/sorteioadmscript.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

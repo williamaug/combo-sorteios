@@ -15,9 +15,9 @@
     <h1 id="titulo1">Combo</h1>
     <h1 id="titulo2">Sorteios</h1>
 	<p class="p-botoes">Já possui uma conta?</p>
-    <a href="html/login.html" class="button">Entrar</a>
+    <a href="php/login.php" class="button">Entrar</a>
     <p class="p-botoes">Deseja criar uma conta?</p>
-    <a href="html/cadastro.html" class="button">Cadastre-se</a>
+    <a href="php/cadastro.php" class="button">Cadastre-se</a>
     <div id="fade">
         <section id="texto">
             <h3>Conheça nosso site:</h3>

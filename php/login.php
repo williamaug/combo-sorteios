@@ -20,15 +20,15 @@
             </p>
             <p id="senha">
                 Senha: <input type="password" name="txtsenha" id="inputsenha">
-                <a href="hub.html" class="button">Entrar</a>
+                <a href="hub.php" class="button">Entrar</a>
             </p>
 		</div>
             <p id="mensagem">Ainda não possui uma conta?
-                <a href="cadastro.html" class="button">Cadastre-se</a>
+                <a href="cadastro.php" class="button">Cadastre-se</a>
             </p>
         </div>
     </section>
-    <a href="../index.html" class="button" id="paginic">Voltar ao início</a>
+    <a href="../index.php" class="button" id="paginic">Voltar ao início</a>
     <script></script>
 </body>
 </html>

@@ -10,31 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg">
     <title>Combo Sorteios</title>
-    <link rel="stylesheet" href="../css/sorteiostyle.css">
+    <link rel="stylesheet" href="../css/sorteioadmstyle.css">
 </head>
-
 <body>
-    <h1>Informações do Sorteio</h1>
+    <h1>Gerenciar Sorteio</h1>
     <div id="info">
         <div id="icone"></div>
         <section>
+            <label>ID: </label>
+            <p>91742</p>
             <label>Nome: </label>
-            <p>Exemplo A</p>
+            <p>Exemplo 1</p>
             <label>Data: </label>
-            <p>18/12/2024</p>
-            <label>Contato: </label>
-            <p>fulanodetal@email.exemplo</p>
+            <p>10/06/2024</p>
             <label>Formato: </label>
-            <p>Digital</p>
+            <p id="form">Digital</p>
             <label>Apenas para maiores de idade? </label>
-            <p>Não</p>
+            <p>Sim</p>
+            <div id="especif"></div>
+            <div id="roleta"></div>
         </section>
+        <button class="button" id="editar">Editar Sorteio</button>
     </div>
-    <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
+    <a href="hub.php" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="../js/sorteioadmscript.js"></script>
 </body>
 
 </html>

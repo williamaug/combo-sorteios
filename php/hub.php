@@ -9,16 +9,15 @@
     <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg">
     <title>Combo Sorteios</title>
     <link rel="stylesheet" href="../css/hubstyle.css">
-
 </head>
 
 <body>
     <header>
-        <a class="button" href="../index.html"> Voltar à Página Inicial
+        <a class="button" href="../index.php"> Voltar à Página Inicial
 		<div id="voltar"></div>
 		</a>
         <h1>Seus Sorteios</h1>
-        <a class="button" href="usuario.html"> Informações do Usuário
+        <a class="button" href="usuario.php"> Informações do Usuário
 		<div id="avatar"></div>
 		</a>
 		
@@ -38,7 +37,7 @@
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
 					<label>Exemplo 1</label>
-					<a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
+					<a class="button" href="sorteioadm.php">Gerenciar Sorteio</a>
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
@@ -46,7 +45,7 @@
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
 					<label>Exemplo 2</label>
-					<a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
+					<a class="button" href="sorteioadm.php">Gerenciar Sorteio</a>
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
@@ -54,7 +53,7 @@
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
 					<label class="novo">Criar Novo Sorteio</label>
-					<a class="button" href="criar.html">Criar Sorteio</a>
+					<a class="button" href="criar.php">Criar Sorteio</a>
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
@@ -65,7 +64,7 @@
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
 					<label>Exemplo A</label>
-					<a class="button" href="sorteio.html">Ver detalhes</a>
+					<a class="button" href="sorteio.php">Ver detalhes</a>
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
@@ -73,7 +72,7 @@
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
 					<label class="novo">Adicionar Novo Sorteio</label>
-					<a class="button" href="adicionar.html">Adicionar Sorteio</a>
+					<a class="button" href="adicionar.php">Adicionar Sorteio</a>
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
