@@ -25,7 +25,7 @@
         </section>
         <button class="button" id="editar">Editar perfil</button>
     </div>
-    <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
+    <a href="hub.php" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
