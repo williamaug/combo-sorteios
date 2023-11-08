@@ -39,7 +39,7 @@
             <a href="login.php" class="button">Entrar</a>
         </p>
     </section>
-    <a href="../index.php" class="button" id="paginic">Voltar ao início</a>
+    <a href="../index.html" class="button" id="paginic">Voltar ao início</a>
     <script src=""></script>
 </body>
 </html>
