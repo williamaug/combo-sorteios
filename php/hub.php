@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <a class="button" href="../index.php"> Voltar à Página Inicial
+        <a class="button" href="../index.html"> Voltar à Página Inicial
 		<div id="voltar"></div>
 		</a>
         <h1>Seus Sorteios</h1>
