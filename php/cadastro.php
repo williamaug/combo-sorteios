@@ -36,10 +36,10 @@
 		</div>
         <a onclick="Cadastrar()" class="button" >Cadastrar-se</a>
         <p id="mensagem">Já possui uma conta?
-            <a href="login.html" class="button">Entrar</a>
+            <a href="login.php" class="button">Entrar</a>
         </p>
     </section>
-    <a href="../index.html" class="button" id="paginic">Voltar ao início</a>
+    <a href="../index.php" class="button" id="paginic">Voltar ao início</a>
     <script src=""></script>
 </body>
 </html>
