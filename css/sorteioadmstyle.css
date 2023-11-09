@@ -24,12 +24,19 @@ section {
     overflow: auto;
 }
 
-label {
+h4 {
+	font: normal 1em "Raleway", sans-serif;
     text-shadow: 0px 0px 1px black;
 }
 
 p {
     margin: max(1vw, 1vh);
+}
+
+label {
+	display: block;
+	margin: 2em 0 0.5em;
+	text-shadow: 0px 0px 1px black;
 }
 
 .button {
@@ -71,16 +78,13 @@ p {
     margin-top: min(8%, 40px);
     margin-bottom: min(10%, 60px);
 }
-#rolar{
-    display: inline-block;
-    font: 1em "Raleway", sans-serif;
-    text-decoration: none;
-    min-height: 1.5vh;
-    background-color: #000E95;
-    color: white;
-    border: 2px solid #000B72;
-    border-radius: 6px;
-    opacity: 0.9;
-    transition-duration: 0.3s;
-    padding: .5vw 1vw;
+
+#rolar {
+	display: block;
+    margin: 2em auto 0;
+}
+
+#resultado {
+	font-family: monospace;
+	margin: 0 10%;
 }
