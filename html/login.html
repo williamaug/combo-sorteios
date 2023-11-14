@@ -12,23 +12,38 @@
 <body>
     <h1><i>Combo</i> Sorteios</h1>
     <section>
-        <div>
-            <h2>Entrar</h2>
+		<h2>Entrar</h2>
+		<div id="msg"></div>
 		<div id="esquerda">
-            <p id="email">
-               E-mail: <input type="email" name="txtemail" id="inputemail">
-            </p>
-            <p id="senha">
-                Senha: <input type="password" name="txtsenha" id="inputsenha">
-                <a href="hub.html" class="button">Entrar</a>
-            </p>
+			<form id="validar" action="../php/validarlogin.php" method="post">
+			<span>
+				<label for="email">E-mail:</label>
+				<input type="email" autocomplete="email" name="email" id="email" required>
+			</span>
+			<span>
+				<label for="senha">Senha:</label>
+				<input type="password" autocomplete="current-password" name="senha" id="senha" required>
+				<input type="submit" class="button" value="Entrar">
+			</span>
+			</form>
 		</div>
-            <p id="mensagem">Ainda não possui uma conta?
-                <a href="cadastro.html" class="button">Cadastre-se</a>
-            </p>
-        </div>
+            <span>
+				<p id="pergunta">Ainda não possui uma conta?</p>
+				<a href="cadastro.html" class="button">Cadastre-se</a>
+            </span>
     </section>
     <a href="../index.html" class="button" id="paginic">Voltar ao início</a>
-    <script></script>
+
+<script>
+    function exibirMsg(mensagem) {
+        let erroElemento = document.getElementById('msg');
+        erroElemento.innerHTML = `<p>${mensagem}</p>`;
+    };
+	
+	const checagem = new URLSearchParams(window.location.search);
+    if (checagem.has('error')) {
+		exibirMsg("E-mail e/ou senha incorreto(s).");
+	}
+</script>
 </body>
 </html>
