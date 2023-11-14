@@ -54,7 +54,7 @@
 		</div>
 	</section>
     </div>
-<script src="../js/hub.js"></script>
+<script src="../js/hubscript.js"></script>
 </body>
 
 </html>
