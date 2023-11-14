@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg">
     <title>Combo Sorteios</title>
     <link rel="stylesheet" href="../css/hubstyle.css">
-
+	<link rel="stylesheet" href="hub.css">
 </head>
 
 <body>
@@ -33,23 +33,7 @@
         </section>
     </div>
     <div class="colunas">
-        <section class="lado">
-			<div class="caixa">
-				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
-				<div class="alinhar">
-					<label>Exemplo 1</label>
-					<a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
-				</div>
-				<img class="trevo" src="../imagens/shamrock.svg">
-			</div>
-			<div class="caixa">
-				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
-				<div class="alinhar">
-					<label>Exemplo 2</label>
-					<a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
-				</div>
-				<img class="trevo" src="../imagens/shamrock.svg">
-			</div>
+        <section class="lado" id="lado1">
 			<div class="caixa">
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
@@ -60,15 +44,7 @@
 			</div>
 		</section>
         <div id="separador"></div>
-        <section class="lado">
-			<div class="caixa">
-				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
-				<div class="alinhar">
-					<label>Exemplo A</label>
-					<a class="button" href="sorteio.html">Ver detalhes</a>
-				</div>
-				<img class="trevo" src="../imagens/shamrock.svg">
-			</div>
+        <section class="lado" id="lado2">
 			<div class="caixa">
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
@@ -81,6 +57,7 @@
 		</section>
     </div>
 	<footer></footer>
+	<script src="../js/hub.js"></script>
 </body>
 
 </html>
