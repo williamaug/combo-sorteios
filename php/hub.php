@@ -9,12 +9,11 @@
     <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg">
     <title>Combo Sorteios</title>
     <link rel="stylesheet" href="../css/hubstyle.css">
-	<link rel="stylesheet" href="hub.css">
 </head>
 
 <body>
     <header>
-        <a class="button" href="../index.html"> Voltar à Página Inicial
+        <a class="button" href="../index.html"> Encerrar Sessão e Sair
 		<div id="voltar"></div>
 		</a>
         <h1>Seus Sorteios</h1>
@@ -42,22 +41,20 @@
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
-		</section>
-        <div id="separador"></div>
+	</section>
+	<div id="separador"></div>
         <section class="lado" id="lado2">
-			<div class="caixa">
-				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
-				<div class="alinhar">
-					<label class="novo">Adicionar Novo Sorteio</label>
-					<a class="button" href="adicionar.html">Adicionar Sorteio</a>
-				</div>
-				<img class="trevo" src="../imagens/shamrock.svg">
+		<div class="caixa">
+			<img class="trevo esquerdo" src="../imagens/shamrock.svg">
+			<div class="alinhar">
+				<label class="novo">Adicionar Novo Sorteio</label>
+				<a class="button" href="adicionar.html">Adicionar Sorteio</a>
 			</div>
-			</div>
-		</section>
+			<img class="trevo" src="../imagens/shamrock.svg">
+		</div>
+	</section>
     </div>
-	<footer></footer>
-	<script src="../js/hub.js"></script>
+<script src="../js/hub.js"></script>
 </body>
 
 </html>
