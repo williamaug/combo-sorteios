@@ -12,34 +12,62 @@
 <body>
     <h1><i>Combo</i> Sorteios</h1>
     <section>
-		<div>
 		<h2>Cadastro</h2>
-        <form>
-            <p id="nome">
-               Nome: <input type="text" name="inputnome" class="input">
-            </p>
-            <p id="idade">
-                Você é maior de idade (18+)?
-                <input type="checkbox" class="checkbox" name="checkidade">
-            </p>
-			<p class="required" id="documento">
-				CPF/CNPJ: <input type="text" name="inputdocumento" class="input" required>
-            <p class="required" id="email">
-                E-mail:
-                <input type="email" name="inputemail" class="input" required>
-            </p>
-            <p class="required" id="senha">
-                Senha:
-                <input type="password" name="inputsenha" class="input" required>
-            </p>
-        </form>
+		<div>
+			<div id="msg"></div>
+			<form id="cadastrar" action="../php/validarcadastro.php" method="post">
+				<div class="campo">
+					<label for="nome">Nome:</label>
+					<input type="text" autocomplete="name" name="nome" id="nome" class="input">
+				</div>
+				<div class="campo">
+					<label for="maioridade">Você é maior de idade (18+)?</label>
+					<input type="checkbox" id="maioridade" class="checkbox" name="maioridade">
+				</div>
+				<div class="campo required">
+					<label for="documento">CPF/CNPJ:</label>
+					<input type="text" autocomplete="off" name="documento" id="documento" class="input" required>
+				</div>
+				<div class="campo required">
+					<label for="email">E-mail:</label>
+					<input type="email" autocomplete="email" name="email" id="email" class="input" required>
+				</div>
+				<div class="campo required">
+					<label for="senha">Senha:</label>
+					<input type="password" name="senha" id="senha" class="input" required>
+				</div>
+				<input id="enviar" type="submit" class="button" value="Cadastrar-se">
+			</form>
 		</div>
-        <a onclick="Cadastrar()" class="button" >Cadastrar-se</a>
-        <p id="mensagem">Já possui uma conta?
-            <a href="login.html" class="button">Entrar</a>
-        </p>
+        <span>
+			<p id="pergunta">Já possui uma conta?</p>
+			<a href="login.html" class="button" id="linkcadastro">Entrar</a>
+        </span>
     </section>
     <a href="../index.html" class="button" id="paginic">Voltar ao início</a>
-    <script src=""></script>
+<script>
+    function exibirMsg(mensagem) {
+        let erroElemento = document.getElementById('msg');
+        erroElemento.innerHTML = `<p>${mensagem}</p>`;
+    };
+	
+	const checagem = new URLSearchParams(window.location.search);
+	let grande = checagem.get("lengtherror");
+	if (grande != null) {
+		switch (grande) {
+			case 'nome':
+				exibirMsg("Nome excede o limite de caracteres.");
+				break;
+			case 'email':
+				exibirMsg("E-mail excede o limite de caracteres.");
+				break;
+			case 'documento':
+				exibirMsg("CPF/CNPJ excede o limite do formato padrão.");
+				break;
+		}
+    } else if (checagem.has('error')) {
+		exibirMsg("Credenciais inválidas ou já existentes.");
+	}
+</script>
 </body>
 </html>
