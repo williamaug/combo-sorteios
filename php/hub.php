@@ -17,7 +17,7 @@
 		<div id="voltar"></div>
 		</a>
         <h1>Seus Sorteios</h1>
-        <a class="button" href="usuario.html"> Informações do Usuário
+        <a class="button" href="../html/usuario.html"> Informações do Usuário
 		<div id="avatar"></div>
 		</a>
 		
@@ -37,7 +37,7 @@
 				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 				<div class="alinhar">
 					<label class="novo">Criar Novo Sorteio</label>
-					<a class="button" href="criar.html">Criar Sorteio</a>
+					<a class="button" href="../html/criar.html">Criar Sorteio</a>
 				</div>
 				<img class="trevo" src="../imagens/shamrock.svg">
 			</div>
@@ -48,7 +48,7 @@
 			<img class="trevo esquerdo" src="../imagens/shamrock.svg">
 			<div class="alinhar">
 				<label class="novo">Adicionar Novo Sorteio</label>
-				<a class="button" href="adicionar.html">Adicionar Sorteio</a>
+				<a class="button" href="../html/adicionar.html">Adicionar Sorteio</a>
 			</div>
 			<img class="trevo" src="../imagens/shamrock.svg">
 		</div>
