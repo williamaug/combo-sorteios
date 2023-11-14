@@ -31,12 +31,25 @@ form {
 }
 
 .button {
-    margin-left: 1vw; font: 1em "Raleway", sans-serif; text-decoration: none; max-width: 30%; min-height: 1.5vh; background-color: #000E95; color: white; border: 2px solid #000B72; border-radius: 6px; padding: .5vw 1vw; opacity: 0.9; transition-duration: 0.3s;}
-.button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
-.button:active {box-shadow: 0 1px black; transform: translateY(1px);
+    margin-left: 0.3em;
+	font: 1em "Raleway", sans-serif;
+	text-decoration: none;
+	max-width: 30%;
+	min-height: 1.5vh;
+	background-color: #000E95;
+	color: white; border: 2px solid #000B72;
+	border-radius: 6px;
+	padding: .5vw 1vw;
+	opacity: 0.9;
+	transition-duration: 0.3s;
+	cursor: pointer;
 }
+.button:hover {opacity: 1; box-shadow: 0 6px 8px #004469;}
+.button:active {box-shadow: 0 1px black; transform: translateY(1px);}
 
 .required {color: red;}
+
+.campo {margin-bottom: 0.6em;}
 
 .input {width: 100%;}
 
@@ -45,6 +58,10 @@ form {
 	transform: scale(1.8);
 }
 
-#mensagem {margin-top: 30px;}
+#pergunta {margin-top: 30px; display: inline;}
 
 #paginic {display: inline-block; margin: 3% 0; padding: 1vw, 0;}
+
+#msg {color: red; margin: -0.4em;}
+
+#enviar {display: block; margin: 0 auto 1.2em; max-width: unset;}
