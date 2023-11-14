@@ -1,5 +1,5 @@
-let listSortAdm = ["Sorteio1", "Sorteio2", "Sorteio3"];
-let listSortPar = ["Sorteio1", "Sorteio2", "Sorteio3"];
+let listSortAdm = ["Exemplo A", "Exemplo B"];
+let listSortPar = ["Exemplo 1", "Exemplo 2"];
 function gerarCaixa1(nomeSorteio) {
     let colun = document.getElementById('lado1');
 
@@ -11,7 +11,7 @@ function gerarCaixa1(nomeSorteio) {
             <label>${nomeSorteio}</label>
             <a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
         </div>
-        <img clasxs="trevo" src="../imagens/shamrock.svg">
+        <img class="trevo" src="../imagens/shamrock.svg">
     `;
 
     colun.appendChild(novaCaixa1);
@@ -28,7 +28,7 @@ function gerarCaixa2(nomeSorteio) {
             <label>${nomeSorteio}</label>
             <a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
         </div>
-        <img clasxs="trevo" src="../imagens/shamrock.svg">
+        <img class="trevo" src="../imagens/shamrock.svg">
     `;
 
     colun.appendChild(novaCaixa2);
