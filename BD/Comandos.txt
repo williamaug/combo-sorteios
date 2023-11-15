@@ -11,19 +11,20 @@ CREATE TABLE IF NOT EXISTS usuario (
 
 CREATE TABLE IF NOT EXISTS sorteio (
     id_sorteio INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome_sorteio VARCHAR(255),
+    nome_sorteio VARCHAR(255) NOT NULL,
     maximo_participantes INT UNSIGNED,
     restricao_maioridade BIT(1),
     administrador VARCHAR(18) NOT NULL,
     data DATE NOT NULL,
+    contato varchar(255),
     formato VARCHAR(10) NOT NULL,
-    FOREIGN KEY (administrador) REFERENCES usuario(documento)
+    FOREIGN KEY (administrador) REFERENCES usuario(documento) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS inscricao (
     id_inscricao INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
     id_sorteio INT UNSIGNED NOT NULL,
     documento_participante VARCHAR(18) NOT NULL,
-    FOREIGN KEY (id_sorteio) REFERENCES sorteio(id_sorteio),
-    FOREIGN KEY (documento_participante) REFERENCES usuario(documento)
+    FOREIGN KEY (id_sorteio) REFERENCES sorteio(id_sorteio) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (documento_participante) REFERENCES usuario(documento) ON DELETE CASCADE ON UPDATE CASCADE
 );

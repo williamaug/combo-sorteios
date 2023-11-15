@@ -26,7 +26,8 @@
 				</div>
 				<div class="campo required">
 					<label for="documento">CPF/CNPJ:</label>
-					<input type="text" autocomplete="off" name="documento" id="documento" class="input" pattern="(?=(?:[^\d]*\d){11})[0-9.\-]*" required>
+					<input type="text" autocomplete="off" name="documento" id="documento" class="input"
+					pattern="^\d{11}$|^\d{3}\.\d{3}\.\d{3}-\d{2}$|^\d{14}$|^\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}$" required>
 				</div>
 				<div class="campo required">
 					<label for="email">E-mail:</label>
