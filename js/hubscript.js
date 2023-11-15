@@ -1,5 +1,36 @@
-let listSortAdm = ["Exemplo A", "Exemplo B"];
-let listSortPar = ["Exemplo 1", "Exemplo 2"];
+fetch("../php/checarsessao.php")
+	.then(response => response.json())
+	.then(data => {
+	if (!data.sessao) {
+		window.location.href = '../html/login.html?autenticar';
+		}
+	})
+
+let listSortAdm = [];
+let listSortPar = [];
+
+fetch('../php/hubquery.php')
+    .then(response => response.json())
+    .then(data => {
+        listSortAdm = data.listSortAdm || [];
+        listSortPar = data.listSortPar || [];
+		
+		if (listSortAdm.length > 0) {
+			for (let i = 0; i < listSortAdm.length; i++) {
+				gerarCaixa1(listSortAdm[i]);
+			}
+		}
+
+		if (listSortPar.length > 0) {
+			for (let i = 0; i < listSortPar.length; i++) {
+				gerarCaixa2(listSortPar[i]);
+			}
+		}
+    })
+    .catch(error => {
+		console.error('Erro ao buscar dados:', error);
+    });
+
 function gerarCaixa1(nomeSorteio) {
     let colun = document.getElementById('lado1');
 
@@ -8,8 +39,8 @@ function gerarCaixa1(nomeSorteio) {
     novaCaixa1.innerHTML = `
         <img class="trevo esquerdo" src="../imagens/shamrock.svg">
         <div class="alinhar">
-            <label>${nomeSorteio}</label>
-            <a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
+            <p class="label">${nomeSorteio}</p>
+            <a class="button" href="sorteioadm.html?${nomeSorteio}">Gerenciar Sorteio</a>
         </div>
         <img class="trevo" src="../imagens/shamrock.svg">
     `;
@@ -25,23 +56,11 @@ function gerarCaixa2(nomeSorteio) {
     novaCaixa2.innerHTML = `
         <img class="trevo esquerdo" src="../imagens/shamrock.svg">
         <div class="alinhar">
-            <label>${nomeSorteio}</label>
-            <a class="button" href="sorteioadm.html">Gerenciar Sorteio</a>
+            <p class="label">${nomeSorteio}</p>
+            <a class="button" href="sorteio.html?${nomeSorteio}">Ver Detalhes</a>
         </div>
         <img class="trevo" src="../imagens/shamrock.svg">
     `;
 
     colun.appendChild(novaCaixa2);
-}
-
-if (listSortAdm.length > 0) {
-    for (let i = 0; i < listSortAdm.length; i++) {
-        gerarCaixa1(listSortAdm[i]);
-    }
-}
-
-if (listSortPar.length > 0) {
-    for (let i = 0; i < listSortPar.length; i++) {
-        gerarCaixa2(listSortPar[i]);
-    }
 }
