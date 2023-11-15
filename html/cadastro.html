@@ -15,7 +15,7 @@
 		<h2>Cadastro</h2>
 		<div>
 			<div id="msg"></div>
-			<form id="cadastrar" action="../php/validarcadastro.php" method="post">
+			<form id="cadastrar" action="../php/cadastroquery.php" method="post">
 				<div class="campo">
 					<label for="nome">Nome:</label>
 					<input type="text" autocomplete="name" name="nome" id="nome" class="input">
@@ -26,7 +26,7 @@
 				</div>
 				<div class="campo required">
 					<label for="documento">CPF/CNPJ:</label>
-					<input type="text" autocomplete="off" name="documento" id="documento" class="input" required>
+					<input type="text" autocomplete="off" name="documento" id="documento" class="input" pattern="(?=(?:[^\d]*\d){11})[0-9.\-]*" required>
 				</div>
 				<div class="campo required">
 					<label for="email">E-mail:</label>
