@@ -51,6 +51,7 @@ label {
     opacity: 0.9;
     transition-duration: 0.3s;
     padding: .5vw 1vw;
+    cursor: pointer;
 }
 
 .button:hover {
