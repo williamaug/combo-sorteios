@@ -18,18 +18,33 @@
     <div id="info">
         <div id="icone"></div>
         <section>
-            <label>Nome: </label><p>Fulano de Tal</p>
-            <label>E-mail: </label><p>fulanodetal@email.exemplo</p>
-            <label>CPF/CNPJ: </label><p>123.456.789-01</p>
-			<label>Maior de idade? </label><p>Sim</p>
+			<div id="msg"></div>
+            <p class="label">Nome: </p>
+				<p id="pnome"></p>
+			<form id="formmodificar" action="../php/usuarioquery.php" method="post">
+				<div class="divinput" id="divnome"></div>
+            <p class="label">E-mail: </p>
+				<p id="pemail"></p>
+				<div class="divinput" id="divemail"></div>
+            <p class="label">CPF/CNPJ: </p>
+				<p id="pdocumento"></p>
+				<div class="divinput" id="divdocumento"></div>
+			<p class="label">Maior de idade? </p>
+				<div class="divinput" id="divmaioridade">
+					<p id="pmaioridade"></p>
+				</div>
+				<div id="divmodificar"></div>
+			</form>
         </section>
-        <button class="button" id="editar">Editar perfil</button>
+		<div id="diveditar">
+			<button class="button" id="editar" onclick="editar()">Editar Perfil</button>
+		</div>
     </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="../js/usuarioscript.js"></script>
 </body>
 
 </html>
