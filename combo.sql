@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08/11/2023 às 14:10
--- Versão do servidor: 10.4.25-MariaDB
--- Versão do PHP: 8.1.10
+-- Generation Time: Nov 14, 2023 at 09:49 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,41 +18,42 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `combo`
+-- Database: `combo`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `inscricao`
+-- Table structure for table `inscricao`
 --
 
 CREATE TABLE `inscricao` (
   `id_inscricao` int(10) UNSIGNED NOT NULL,
   `id_sorteio` int(10) UNSIGNED NOT NULL,
   `documento_participante` varchar(18) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `sorteio`
+-- Table structure for table `sorteio`
 --
 
 CREATE TABLE `sorteio` (
   `id_sorteio` int(10) UNSIGNED NOT NULL,
-  `nome_sorteio` varchar(255) DEFAULT NULL,
+  `nome_sorteio` varchar(255) NOT NULL,
   `maximo_participantes` int(10) UNSIGNED DEFAULT NULL,
   `restricao_maioridade` bit(1) DEFAULT NULL,
   `administrador` varchar(18) NOT NULL,
   `data` date NOT NULL,
+  `contato` varchar(255) DEFAULT NULL,
   `formato` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -61,14 +62,14 @@ CREATE TABLE `usuario` (
   `documento` varchar(18) NOT NULL,
   `senha` char(60) NOT NULL,
   `maioridade` bit(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `inscricao`
+-- Indexes for table `inscricao`
 --
 ALTER TABLE `inscricao`
   ADD PRIMARY KEY (`id_inscricao`),
@@ -76,47 +77,47 @@ ALTER TABLE `inscricao`
   ADD KEY `documento_participante` (`documento_participante`);
 
 --
--- Índices de tabela `sorteio`
+-- Indexes for table `sorteio`
 --
 ALTER TABLE `sorteio`
   ADD PRIMARY KEY (`id_sorteio`),
   ADD KEY `administrador` (`administrador`);
 
 --
--- Índices de tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`documento`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `inscricao`
+-- AUTO_INCREMENT for table `inscricao`
 --
 ALTER TABLE `inscricao`
   MODIFY `id_inscricao` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de tabela `sorteio`
+-- AUTO_INCREMENT for table `sorteio`
 --
 ALTER TABLE `sorteio`
   MODIFY `id_sorteio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- Restrições para tabelas despejadas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para tabelas `inscricao`
+-- Constraints for table `inscricao`
 --
 ALTER TABLE `inscricao`
   ADD CONSTRAINT `inscricao_ibfk_1` FOREIGN KEY (`id_sorteio`) REFERENCES `sorteio` (`id_sorteio`),
   ADD CONSTRAINT `inscricao_ibfk_2` FOREIGN KEY (`documento_participante`) REFERENCES `usuario` (`documento`);
 
 --
--- Restrições para tabelas `sorteio`
+-- Constraints for table `sorteio`
 --
 ALTER TABLE `sorteio`
   ADD CONSTRAINT `sorteio_ibfk_1` FOREIGN KEY (`administrador`) REFERENCES `usuario` (`documento`);
