@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (verificarCredenciais($email, $senha)) {
         $_SESSION["email"] = $email;
-        header("Location: hub.php");
+        header("Location: ../html/hub.html");
         exit();
     } else {
         header("Location: ../html/login.html?error");

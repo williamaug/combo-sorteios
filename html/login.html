@@ -15,7 +15,7 @@
 		<h2>Entrar</h2>
 		<div id="msg"></div>
 		<div id="esquerda">
-			<form id="validar" action="../php/validarlogin.php" method="post">
+			<form id="validar" action="../php/loginquery.php" method="post">
 			<span>
 				<label for="email">E-mail:</label>
 				<input type="email" autocomplete="email" name="email" id="email" required>
@@ -43,6 +43,8 @@
 	const checagem = new URLSearchParams(window.location.search);
     if (checagem.has('error')) {
 		exibirMsg("E-mail e/ou senha incorreto(s).");
+	} else if (checagem.has('autenticar')) {
+		exibirMsg("Realize sua autenticação antes de prosseguir.");
 	}
 </script>
 </body>

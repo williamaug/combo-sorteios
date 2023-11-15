@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (cadastrarUsuario($email, $senha, $documento, $nome, $maioridade)) {
         session_start();
         $_SESSION["email"] = $email;
-        header("Location: hub.php");
+        header("Location: ../html/hub.html");
         exit();
     } else {
         header("Location: ../html/cadastro.html?error");

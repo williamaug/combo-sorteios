@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../imagens/favicon.svg">
+    <title>Combo Sorteios</title>
+    <link rel="stylesheet" href="../css/hubstyle.css">
+</head>
+
+<body>
+    <header>
+        <form id="formsaida" action="../php/encerrarsessao.php" method="post">
+			<button type="submit" class="button" id="botaosaida">
+				Encerrar Sessão e Sair
+				<div id="sair"></div>
+			</button>
+		</form>
+        <h1>Seus Sorteios</h1>
+        <a class="button" href="../html/usuario.html"> Informações do Usuário
+		<div id="avatar"></div>
+		</a>
+		
+    </header>
+    <div class="colunas">
+        <section class="topo-colunas">
+            <h2>Administrador</h2>
+        </section>
+        <div id="topo-separador"></div>
+        <section class="topo-colunas">
+            <h2>Participante</h2>
+        </section>
+    </div>
+    <div class="colunas">
+        <section class="lado" id="lado1">
+			<div class="caixa">
+				<img class="trevo esquerdo" src="../imagens/shamrock.svg">
+				<div class="alinhar">
+					<p class="label novo">Criar Novo Sorteio</p>
+					<a class="button" href="../html/criar.html">Criar Sorteio</a>
+				</div>
+				<img class="trevo" src="../imagens/shamrock.svg">
+			</div>
+	</section>
+	<div id="separador"></div>
+        <section class="lado" id="lado2">
+		<div class="caixa">
+			<img class="trevo esquerdo" src="../imagens/shamrock.svg">
+			<div class="alinhar">
+				<p class="label novo">Adicionar Novo Sorteio</p>
+				<a class="button" href="../html/adicionar.html">Adicionar Sorteio</a>
+			</div>
+			<img class="trevo" src="../imagens/shamrock.svg">
+		</div>
+	</section>
+    </div>
+<script src="../js/hubscript.js"></script>
+</body>
+
+</html>
