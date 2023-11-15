@@ -20,17 +20,24 @@
 
         section {
             text-align: left;
-            margin: 2vw;
+            margin: 0 2vw;
             overflow: auto;
         }
-        
-		label {
-			text-shadow: 0px 0px 1px black;
-			margin-right: 6px;
-		}
 
 		p {
 			margin: 1vw 1vh;
+		}
+        
+		input {
+			width: 50%;
+			margin-left: 1em;
+		}
+		
+		form {margin-bottom: 0.5em;}
+		
+		.label {
+			text-shadow: 0px 0px 1px black;
+			margin: 0.6em 0;
 		}
 		
         .button {
@@ -45,6 +52,7 @@
             opacity: 0.9;
             transition-duration: 0.3s;
             padding: .5vw 1vw;
+			cursor: pointer;
         }
         
         .button:hover {
@@ -59,8 +67,8 @@
 
         #icone {
             overflow: hidden;
-            font-size: min(4vw, 4vh);
-            margin: 1em auto;
+            font-size: min(2vw, 2vh);
+            margin: auto;
             border: 4px dashed gray;
             border-radius: 2em;
             height: 6em;
@@ -102,6 +110,23 @@
             margin: auto;
             font-size: 1.2em;
         }
+		
+		#pmaioridade {
+			display: inline-block;
+			margin-top: unset;
+		}
+		
+		#maioridade {
+			width: unset;
+			margin-left: unset;
+			transform: scale(1.8);
+		}
+		
+		#modificar {
+			width: unset;
+			display: block;
+			margin: auto;
+		}
 
         #voltar {
             margin-top: min(8%, 40px);
