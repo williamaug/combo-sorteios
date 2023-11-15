@@ -25,6 +25,7 @@ section {
 }
 
 h4 {
+	margin: 0;
 	font: normal 1em "Raleway", sans-serif;
     text-shadow: 0px 0px 1px black;
 }
@@ -51,7 +52,7 @@ label {
     opacity: 0.9;
     transition-duration: 0.3s;
     padding: .5vw 1vw;
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .button:hover {
@@ -85,7 +86,11 @@ label {
     margin: 2em auto 0;
 }
 
+#sorteados {
+	margin-top: 2em;
+}
+
 #resultado {
 	font-family: monospace;
-	margin: 0 10%;
+	margin: 1em 10% 0;
 }
