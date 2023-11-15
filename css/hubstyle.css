@@ -13,13 +13,6 @@
             border-bottom: solid 2px #6FFFB2;
             height: 10%;
         }
-		
-	label {
-		color: #009847;
-		text-shadow: 0px 0px 2px #009847, 0 0 10px white;
-		font-weight: bold;
-		display: block;
-		margin: 0.5em 0 1.5em;}
 
         h1 {
             font: bold 4rem "Raleway", sans-serif;
@@ -33,9 +26,9 @@
         }
 		
 	.novo {
-		color: white;
-		text-shadow: 1px 2px 2px #009847, 3px 3px 9px #007536;
-		text-decoration: dotted #007536 0.2em underline overline;
+		color: white !important;
+		text-shadow: 1px 3px 3px #009847, 3px 3px 9px #007536 !important;
+		text-decoration: dotted white 0.2em underline overline;
 	}
 
         .button {
@@ -52,6 +45,7 @@
             transition-duration: 0.3s;
             margin: min(1vw, 1vh) min(1vh, 1vw);
 			overflow: auto;
+			cursor: pointer;
         }
 
         .button:hover {
@@ -80,6 +74,13 @@
 			border-top: solid 0.3em #009847;
 			overflow: auto;
         }
+		
+	.label {
+		color: #009847;
+		text-shadow: 0px 0px 2px #009847, 0 0 10px white;
+		font-weight: bold;
+		display: block;
+		margin: 0.5em 0 1.5em;}
 		
 	.caixa {
 		flex: 0.8;
@@ -116,7 +117,9 @@
             background: linear-gradient(#009847, #00FF76, #00FF76);
         }
 		
-		#voltar {
+		#botaosaida {max-width: unset;}
+		
+		#sair {
             overflow: hidden;
             font-size: min(1vw, 1vh);
             margin: 0.5em auto;
@@ -125,7 +128,7 @@
             background: none;
         }
 
-        #voltar::before {
+        #sair::before {
             content: " ";
             display: block;
             height: 1em;
@@ -136,7 +139,7 @@
             top: 2em;
         }
 
-        #voltar::after {
+        #sair::after {
             content: " ";
             display: block;
             height: 2em;
