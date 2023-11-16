@@ -111,21 +111,23 @@
             font-size: 1.2em;
         }
 		
-		#pmaioridade {
+		#documento {margin-bottom: 1.2em;}
+		
+		#labelmaioridade {
 			display: inline-block;
-			margin-top: unset;
+			margin: unset;
 		}
 		
 		#maioridade {
 			width: unset;
-			margin-left: unset;
+			margin-left: 0.8em;
 			transform: scale(1.8);
 		}
 		
 		#modificar {
 			width: unset;
 			display: block;
-			margin: auto;
+			margin: 1em auto 0;
 		}
 
         #voltar {

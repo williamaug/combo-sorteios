@@ -6,32 +6,31 @@ fetch("../php/checarsessao.php")
 		}
 	})
 
-let listSortAdm = [];
-let listSortPar = [];
-
 fetch('../php/hubquery.php')
     .then(response => response.json())
     .then(data => {
-        listSortAdm = data.listSortAdm || [];
-        listSortPar = data.listSortPar || [];
+        const listSortAdm = data.listSortAdm || [];
+		const listIdAdm = data.listIdAdm || [];
+        const listSortPar = data.listSortPar || [];
+		const listIdPar = data.listIdPar || [];
 		
 		if (listSortAdm.length > 0) {
 			for (let i = 0; i < listSortAdm.length; i++) {
-				gerarCaixa1(listSortAdm[i]);
+				gerarCaixa1(listSortAdm[i], listIdAdm[i]);
 			}
 		}
 
 		if (listSortPar.length > 0) {
 			for (let i = 0; i < listSortPar.length; i++) {
-				gerarCaixa2(listSortPar[i]);
+				gerarCaixa2(listSortPar[i], listIdPar[i]);
 			}
 		}
     })
     .catch(error => {
-		console.error('Erro ao buscar dados:', error);
+		console.error('Erro ao buscar dados: ', error);
     });
 
-function gerarCaixa1(nomeSorteio) {
+function gerarCaixa1(nomeSorteio, idSorteio) {
     let colun = document.getElementById('lado1');
 
     let novaCaixa1 = document.createElement('div');
@@ -40,7 +39,7 @@ function gerarCaixa1(nomeSorteio) {
         <img class="trevo esquerdo" src="../imagens/shamrock.svg">
         <div class="alinhar">
             <p class="label">${nomeSorteio}</p>
-            <a class="button" href="sorteioadm.html?${nomeSorteio}">Gerenciar Sorteio</a>
+            <a class="button" href="sorteioadm.html?${idSorteio}">Gerenciar Sorteio</a>
         </div>
         <img class="trevo" src="../imagens/shamrock.svg">
     `;
@@ -48,7 +47,7 @@ function gerarCaixa1(nomeSorteio) {
     colun.appendChild(novaCaixa1);
 }
 
-function gerarCaixa2(nomeSorteio) {
+function gerarCaixa2(nomeSorteio, idSorteio) {
     let colun = document.getElementById('lado2');
 
     let novaCaixa2 = document.createElement('div');
@@ -57,7 +56,7 @@ function gerarCaixa2(nomeSorteio) {
         <img class="trevo esquerdo" src="../imagens/shamrock.svg">
         <div class="alinhar">
             <p class="label">${nomeSorteio}</p>
-            <a class="button" href="sorteio.html?${nomeSorteio}">Ver Detalhes</a>
+            <a class="button" href="sorteio.html?${idSorteio}">Ver Detalhes</a>
         </div>
         <img class="trevo" src="../imagens/shamrock.svg">
     `;

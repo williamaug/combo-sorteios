@@ -19,12 +19,11 @@
         }
 
         section {
-            text-align: left;
-            margin: 2vw;
-            overflow: auto;
-        }
-		
-		input {width: 90%;}
+			 display: inline-block;
+			 text-align: left;
+			 margin: 1em auto 0;
+			 overflow: auto;
+		}
 		
 		.required {
 			color: red;
@@ -43,6 +42,7 @@
             opacity: 0.9;
             transition-duration: 0.3s;
             padding: .5vw 1vw;
+			cursor: pointer;
         }
 
         .button:hover {
@@ -56,17 +56,29 @@
         }
 
         #info {
-            background: white;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
-            border-radius: 10px;
-            padding: min(3vh, 3vw) min(2vw, 2vh);
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
-            font-size: 1.2em;
-        }
+			 background: white;
+			 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+			 border-radius: 10px;
+			 padding: 1em min(2vw, 2vh) min(3vh, 3vw);
+			 width: 24%;
+			 min-width: 340px;
+			 max-width: 800px;
+			 margin: auto;
+			 font-size: 1.2em;
+		}
 
         #voltar {
             margin-top: min(8%, 40px);
             margin-bottom: min(10%, 60px);
         }
+		
+		#id {
+			display: block;
+			width: 90%;
+			margin: 1em auto;
+		}
+		
+		#mensagem {
+			 color: red;
+			 font-weight: bold;
+		}
