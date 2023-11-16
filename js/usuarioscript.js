@@ -52,12 +52,16 @@ function editar() {
 	let maioridadeAtual = "";
 	if (pMaioridade.textContent === "Sim") {maioridadeAtual = "checked";}
 	
+	pNome.remove();
 	divNome.innerHTML = `<input id="nome" name="nome" type="text" autocomplete="name" value="${nomeAtual}">`;
+	pEmail.remove();
 	divEmail.innerHTML = `<input id="email" name="email" type="email" autocomplete="email" value="${emailAtual}">`;
+	pDocumento.remove();
 	divDocumento.innerHTML = `
 	<input id="documento" name="documento" type="text" autocomplete="off"
 	pattern="^\\d{11}$|^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$|^\\d{14}$|^\\d{2}\\.\\d{3}\\.\\d{3}\/\\d{4}-\\d{2}$" value="${documentoAtual}">
 	`;
+	pMaioridade.remove();
 	divMaioridade.innerHTML += `<input id="maioridade" name="maioridade" type="checkbox" ${maioridadeAtual}>`
 	divModificar.innerHTML = `<input class="button" id="modificar" type="submit" value="Modificar"></input>`
 	divEditar.innerHTML = `<button class="button" id="cancelar" onclick="location.reload()">Cancelar</button>`;
