@@ -15,18 +15,41 @@
 <body>
     <h1>Adicionar Sorteio</h1>
     <div id="info">
-        <div id="icone"></div>
+        <div id="msg"></div>
         <section>
-            <label class="required">Número ID do Sorteio: </label>
-            <input type="text" name="inputid" required>
+            <label class="required" for="id">Número ID do Sorteio: </label>
+		<form action="../php/adicionarquery.php" method="post">
+            <input type="text" name="id" id="id" required>
         </section>
-        <button class="button" id="editar">Adicionar Sorteio</button>
+        <input type="submit" class="button" id="adicionar" value="Adicionar Sorteio"</input>
+		</form>
     </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-    <script src="script.js"></script>
+<script>
+	function exibirMsg(mensagem) {
+        let erroElemento = document.getElementById('msg');
+        erroElemento.innerHTML = `<p id="mensagem">${mensagem}</p>`;
+    };
+	
+	const checagem = new URLSearchParams(window.location.search);
+	let tipo = checagem.get("error");
+	if (tipo != null) {
+		switch (tipo) {
+			case '404':
+				exibirMsg("Sorteio não encontrado.");
+				break;
+			case 'adm':
+				exibirMsg("O usuário administra esse sorteio.");
+				break;
+			case 'function':
+				exibirMsg("Houve um erro na adição do sorteio.");
+				break;
+		}
+	}
+</script>
 </body>
 
 </html>

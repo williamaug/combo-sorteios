@@ -16,39 +16,66 @@
 <body>
     <h1>Criar Sorteio</h1>
     <div id="info">
-        <div id="icone"></div>
+        <div id="msg"></div>
+		<form id="formcriar" action="../php/criarquery.php" method="post">
         <section>
             <div class="atributo">
-                <label class="mainlabel">Nome: </label>
-                <input type="text" name="inputnome" id="inputnome">
+                <label class="mainlabel required" for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" required>
             </div>
+			<div class="atributo">
+                <label class="mainlabel required" for="data">Data: </label>
+                <input type="date" name="data" id="data" required>
+			</div>
             <div class="atributo">
-                <label class="mainlabel required">Data: </label>
-                <input type="date" name="inputdata" id="data" required>
-            </div>
-            <div class="atributo">
-                <label class="mainlabel required espaco">Formato: </label>
+                <label class="mainlabel required espaco" for="digital">Formato: </label>
                 <div id="divradio">
-                    <div id="divdigital">
-                        <input type="radio" id="digital" name="inputformato" value="digital" class="check" required>
-                        <label for="digital" class="labelradio">Digital</label>
-                    </div>
-                    <input type="radio" id="presencial" name="inputformato" value="presencial" class="check" required>
-                    <label for="presencial" class="labelradio">Presencial</label>
-                </div>
+					<div id="divdigital">
+						<input type="radio" id="digital" name="formato" value="digital" class="check" required>
+						<label for="digital" class="labelradio">Digital</label>
+					</div>
+					<div id="divpresencial">
+						<input type="radio" id="presencial" name="formato" value="presencial" class="check">
+						<label for="presencial" class="labelradio">Presencial</label>
+					</div>
+				</div>
             </div>
-            <div class="atributo">
-                <label class="mainlabel espaco">Apenas para maiores de idade? </label>
-                <input type="checkbox" name="inputdocumento" class="check">
+            <div>
+                <label class="mainlabel espaco" for="maioridade">Apenas para maiores de idade? </label>
+                <input type="checkbox" id="maioridade" name="maioridade" class="check">
             </div>
         </section>
-        <button class="button" id="editar">Criar Sorteio</button>
+		<div>
+        <input class="button" type="submit" id="criar" value="Criar Sorteio">
+		</div>
+		</form>
     </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-    <script src="script.js"></script>
+<script>
+	function exibirMsg(mensagem) {
+        let erroElemento = document.getElementById('msg');
+        erroElemento.innerHTML = `<p id="mensagem">${mensagem}</p>`;
+    };
+	
+	const checagem = new URLSearchParams(window.location.search);
+	let tipo = checagem.get("error");
+	if (tipo != null) {
+		switch (tipo) {
+			case 'length':
+				exibirMsg("Nome excede o limite de caracteres.");
+				break;
+			case 'date':
+				exibirMsg("A data escolhida já passou.");
+				break;
+			case 'function':
+				exibirMsg("Houve um erro na criação do sorteio.");
+				break;
+		}
+	}
+</script>
 </body>
 
 </html>
