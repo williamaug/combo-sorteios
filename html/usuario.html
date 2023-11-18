@@ -18,10 +18,10 @@
     <div id="info">
         <div id="icone"></div>
         <section>
+		<form id="formmodificar" action="../php/usuarioquery.php" method="post">
 			<div id="msg"></div>
             <p class="label">Nome: </p>
 				<p id="pnome"></p>
-			<form id="formmodificar" action="../php/usuarioquery.php" method="post">
 				<div class="divinput" id="divnome"></div>
             <p class="label">E-mail: </p>
 				<p id="pemail"></p>
@@ -34,7 +34,7 @@
 					<p id="pmaioridade"></p>
 			</div>
 			<div id="divmodificar"></div>
-			</form>
+		</form>
         </section>
 		<div id="diveditar">
 			<button class="button" id="editar" onclick="editar()">Editar Perfil</button>

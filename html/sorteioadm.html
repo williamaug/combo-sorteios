@@ -15,19 +15,52 @@
 <body>
     <h1>Gerenciar Sorteio</h1>
     <div id="info">
+	<div id="msg"></div>
+	<form id="formeditar" action="../php/sorteioadmquery.php" method="post">
         <section>
-            <h4>ID: </h4>
-            <p>91742</p>
-            <h4>Nome: </h4>
-            <p>Exemplo 1</p>
-            <h4>Data: </h4>
-            <p>10/06/2024</p>
-            <h4>Formato: </h4>
-            <p id="form">Digital</p>
-            <h4>Apenas para maiores de idade? </h4>
-            <p>Sim</p>
+            <div id="divid">
+				<h4>ID:</h4>
+				<p id="pid"></p>
+            </div>
+			<div id="hid"></div>
+            <div>
+				<h4>Nome:</h4>
+				<p id="pnome"></p>
+				<div class="secdiv" id="divnome"></div>
+            </div>
+            <div>
+				<h4>Data:</h4>
+				<p id="pdata"></p>
+				<div class="secdiv" id="divdata"></div>
+			</div>
+			<div>
+				<h4>Contato:</h4>
+				<p id="pcontato"></p>
+				<div class="secdiv" id="divcontato"></div>
+            </div>
+            <div id="liberar">
+				<h4>Formato:</h4>
+				<p id="pformato"></p>
+				<div id="divformato"></div>
+            </div>
+            <div>
+				<h4>Apenas para maiores de idade?</h4>
+				<p id="pmaioridade"></p>
+				<div class="secdiv" id="divmaioridade"></div>
+			</div>
+			<div>
+				<h4>Número máximo de participantes:</h4>
+				<p id="pmaximo"></p>
+				<div class="secdiv" id="divmaximo"></div>
+			</div>
+			<div id="divinscritos">
+				<h4>Número de inscritos:</h4>
+				<p id="pinscritos"></p>
+			</div>
         </section>
-        <button class="button" id="editar">Editar Sorteio</button>
+		<span id="spanbotoes"></span>
+	</form>
+        <button class="button" id="editar" onclick="editar()">Editar Sorteio</button>
 		<div>
             <div id="sorteados"></div>
             <div id="roleta"></div>
@@ -35,7 +68,7 @@
     </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
-        <p><i>Combo</i> Sorteios</p>
+        <p id="p "><i>Combo</i> Sorteios</p>
     </footer>
     <script src="../js/sorteioadmscript.js"></script>
 </body>

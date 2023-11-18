@@ -20,40 +20,48 @@
 		<form id="formcriar" action="../php/criarquery.php" method="post">
         <section>
             <div class="atributo">
-                <label class="mainlabel required" for="nome">Nome: </label>
-                <input type="text" name="nome" id="nome" required>
-            </div>
+                <label class="mainlabel required" for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" class="texto" autocomplete="off" required>
+           </div>
 			<div class="atributo">
-                <label class="mainlabel required" for="data">Data: </label>
-                <input type="date" name="data" id="data" required>
+                <label class="mainlabel required" for="data">Data:</label>
+                <input type="date" name="data" id="data" class="outro" autocomplete="off" required>
 			</div>
             <div class="atributo">
-                <label class="mainlabel required espaco" for="digital">Formato: </label>
+                <label class="mainlabel required espaco" for="digital">Formato:</label>
                 <div id="divradio">
 					<div id="divdigital">
-						<input type="radio" id="digital" name="formato" value="digital" class="check" required>
+						<input type="radio" id="digital" name="formato" value="Digital" class="check" required>
 						<label for="digital" class="labelradio">Digital</label>
 					</div>
 					<div id="divpresencial">
-						<input type="radio" id="presencial" name="formato" value="presencial" class="check">
+						<input type="radio" id="presencial" name="formato" value="Presencial" class="check">
 						<label for="presencial" class="labelradio">Presencial</label>
 					</div>
 				</div>
-            </div>
+           </div>
+			<div class="atributo">
+                <label class="mainlabel" for="maximo">Participantes Máximos:</label>
+                <input type="number" name="maximo" id="maximo" min="2" max="4294967294" pattern="^\d{1,10}$" class="outro" autocomplete="off">
+			</div>
+			<div class="atributo">
+                <label class="mainlabel" for="contato">Contato:</label>
+                <input type="text" name="contato" id="contato" class="texto" autocomplete="off">
+			</div>
             <div>
-                <label class="mainlabel espaco" for="maioridade">Apenas para maiores de idade? </label>
+                <label class="mainlabel espaco" for="maioridade">Apenas para maiores de idade?</label>
                 <input type="checkbox" id="maioridade" name="maioridade" class="check">
-            </div>
-        </section>
+           </div>
+       </section>
 		<div>
         <input class="button" type="submit" id="criar" value="Criar Sorteio">
 		</div>
 		</form>
-    </div>
+   </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
-    </footer>
+   </footer>
 <script>
 	function exibirMsg(mensagem) {
         let erroElemento = document.getElementById('msg');
@@ -64,8 +72,11 @@
 	let tipo = checagem.get("error");
 	if (tipo != null) {
 		switch (tipo) {
-			case 'length':
+			case 'name':
 				exibirMsg("Nome excede o limite de caracteres.");
+				break;			
+			case 'contact':
+				exibirMsg("Contato excede o limite de caracteres.");
 				break;
 			case 'date':
 				exibirMsg("A data escolhida já passou.");

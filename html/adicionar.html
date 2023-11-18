@@ -19,7 +19,7 @@
         <section>
             <label class="required" for="id">Número ID do Sorteio: </label>
 		<form action="../php/adicionarquery.php" method="post">
-            <input type="text" name="id" id="id" required>
+            <input type="number" name="id" id="id" min="1" max="4294967295" autocomplete="off" required>
         </section>
         <input type="submit" class="button" id="adicionar" value="Adicionar Sorteio"</input>
 		</form>
@@ -28,28 +28,7 @@
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-<script>
-	function exibirMsg(mensagem) {
-        let erroElemento = document.getElementById('msg');
-        erroElemento.innerHTML = `<p id="mensagem">${mensagem}</p>`;
-    };
-	
-	const checagem = new URLSearchParams(window.location.search);
-	let tipo = checagem.get("error");
-	if (tipo != null) {
-		switch (tipo) {
-			case '404':
-				exibirMsg("Sorteio não encontrado.");
-				break;
-			case 'adm':
-				exibirMsg("O usuário administra esse sorteio.");
-				break;
-			case 'function':
-				exibirMsg("Houve um erro na adição do sorteio.");
-				break;
-		}
-	}
-</script>
+<script src="../js/adicionarscript.js"></script>
 </body>
 
 </html>

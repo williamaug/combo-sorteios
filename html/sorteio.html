@@ -16,25 +16,48 @@
 <body>
     <h1>Informações do Sorteio</h1>
     <div id="info">
-        <div id="icone"></div>
-        <section>
-            <label>Nome: </label>
-            <p>Exemplo A</p>
-            <label>Data: </label>
-            <p>18/12/2024</p>
-            <label>Contato: </label>
-            <p>fulanodetal@email.exemplo</p>
-            <label>Formato: </label>
-            <p>Digital</p>
-            <label>Apenas para maiores de idade? </label>
-            <p>Não</p>
-        </section>
+		<div id="meio">
+			<section>
+				<div class="atributo">
+					<p class="label">ID:</p>
+					<p id="pid"></p>
+				</div>
+				<div class="atributo">
+					<p class="label">Nome:</p>
+					<p id="pnome"></p>
+				</div>
+				<div class="atributo">
+					<p class="label">Data:</p>
+					<p id="pdata"></p>
+				</div>
+				<div class="atributo" id="divcontato">
+					<p class="label">Contato:</p>
+					<p id="pcontato"></p>
+				</div>
+				<div class="atributo">
+					<p class="label">Formato:</p>
+					<p id="pformato"></p>
+				</div>
+				<div class="atributo" id="divmaximo">
+					<p class="label">Máximo de participantes:</p>
+					<p id="pmaximo"></p>
+				</div>
+				<div class="atributo">
+					<p class="label">Apenas para maiores de idade?</p>
+					<p id="pmaioridade"></p>
+				</div>
+				<div class="atributo">
+					<p class="label">Número da sua inscrição:</p>
+					<p id="pnumero"></p>
+				</div>
+			</section>
+		</div>
     </div>
     <a href="hub.html" class="button" id="voltar">Voltar à página anterior</a>
     <footer>
         <p><i>Combo</i> Sorteios</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="../js/sorteioscript.js"></script>
 </body>
 
 </html>
