@@ -43,6 +43,12 @@
  .espaco {
      margin-bottom: 1em;
 }
+ .texto {
+    width: 94%;
+}
+ .outro {
+    width: 32%;
+}
  .button {
      display: inline-block;
      font: 1em "Raleway", sans-serif;
@@ -80,9 +86,6 @@
      margin-top: min(8%, 40px);
      margin-bottom: min(10%, 60px);
 }
- #nome {
-    width: 94%;
-}
  #divradio {
      display: block;
 }
@@ -94,6 +97,7 @@
      max-width: 120px;
 }
  #criar {display: inline-block;}
+ #maioridade {margin-left: 0.6em;}
  #mensagem {
 	 color: red;
 	 font-weight: bold;

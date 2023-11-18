@@ -81,6 +81,6 @@
 
         #titulo2 {
             margin-top: -1vh;
-            margin-bottom: min(18vh, 18vw);
+            margin-bottom: min(12vh, 12vw);
             text-decoration: dashed 14px underline;
         }

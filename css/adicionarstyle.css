@@ -60,8 +60,8 @@
 			 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 			 border-radius: 10px;
 			 padding: 1em min(2vw, 2vh) min(3vh, 3vw);
-			 width: 24%;
-			 min-width: 340px;
+			 width: 20%;
+			 min-width: 240px;
 			 max-width: 800px;
 			 margin: auto;
 			 font-size: 1.2em;
@@ -74,7 +74,7 @@
 		
 		#id {
 			display: block;
-			width: 90%;
+			width: 48%;
 			margin: 1em auto;
 		}
 		

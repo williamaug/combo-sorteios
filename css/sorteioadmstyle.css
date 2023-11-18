@@ -24,20 +24,50 @@ section {
     overflow: auto;
 }
 
+section > div {
+	white-space: nowrap;
+	height: 2.4em;
+}
+
 h4 {
+	display: inline-block;
 	margin: 0;
 	font: normal 1em "Raleway", sans-serif;
     text-shadow: 0px 0px 1px black;
+	
 }
 
-p {
-    margin: max(1vw, 1vh);
+section p {
+	display: inline-block;
+    margin: 0.6em 0.1em;
 }
 
-label {
-	display: block;
-	margin: 2em 0 0.5em;
-	text-shadow: 0px 0px 1px black;
+input {margin: 0.5em 0.1em;}
+
+label {display: inline-block;}
+
+.secdiv {display: inline-block;}
+
+.margem {
+	margin: 2em 0;
+}
+
+.check {
+     margin-left: min(3vw, 1.5vh);
+     transform: scale(1.4);
+}
+
+.texto {
+    width: 200%;
+}
+
+.outro {
+    width: 84%;
+}
+
+.resultado {
+	font-family: monospace;
+	margin: 1em 10% 0;
 }
 
 .button {
@@ -70,27 +100,33 @@ label {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: min(3vh, 3vw) min(2vw, 2vh);
-    width: 80%;
+    width: 24%;
+	min-width: 540px;
     max-width: 800px;
     margin: auto;
     font-size: 1.2em;
 }
+
+#mensagem {
+	color: red;
+	font-weight: bold;
+	margin: 0 0 -1.2em;
+}
+
+#liberar {height: unset;}
+
+#divdigital {margin-top: 0.5em;}
+
+#divpresencial {margin-bottom: 0.5em;}
 
 #voltar {
     margin-top: min(8%, 40px);
     margin-bottom: min(10%, 60px);
 }
 
+#hid {height: 0;}
+
 #rolar {
 	display: block;
     margin: 2em auto 0;
-}
-
-#sorteados {
-	margin-top: 2em;
-}
-
-#resultado {
-	font-family: monospace;
-	margin: 1em 10% 0;
 }
