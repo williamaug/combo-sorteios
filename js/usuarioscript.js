@@ -20,10 +20,10 @@ fetch('../php/usuarioquery.php')
 		console.error('Erro ao buscar dados: ', error);
     });
 
-let pNome = document.getElementById('pnome');
-let pEmail = document.getElementById('pemail');
-let pDocumento = document.getElementById('pdocumento');
-let pMaioridade = document.getElementById('pmaioridade');
+const pNome = document.getElementById('pnome');
+const pEmail = document.getElementById('pemail');
+const pDocumento = document.getElementById('pdocumento');
+const pMaioridade = document.getElementById('pmaioridade');
 
 function mostrarDados(n, e, d, m) {
 
@@ -39,12 +39,12 @@ function mostrarDados(n, e, d, m) {
 
 function editar() {
 	
-	let divNome = document.getElementById('divnome');
-	let divEmail = document.getElementById('divemail');
-	let divDocumento = document.getElementById('divdocumento');
-	let divMaioridade = document.getElementById('divmaioridade');
-	let divEditar = document.getElementById('diveditar');
-	let divModificar = document.getElementById('divmodificar');
+	const divNome = document.getElementById('divnome');
+	const divEmail = document.getElementById('divemail');
+	const divDocumento = document.getElementById('divdocumento');
+	const divMaioridade = document.getElementById('divmaioridade');
+	const divEditar = document.getElementById('diveditar');
+	const divModificar = document.getElementById('divmodificar');
 	
 	let nomeAtual = pNome.textContent;
 	let emailAtual = pEmail.textContent;
@@ -58,12 +58,11 @@ function editar() {
 	divEmail.innerHTML = `<input id="email" name="email" type="email" autocomplete="email" value="${emailAtual}">`;
 	pDocumento.remove();
 	divDocumento.innerHTML = `
-	<input id="documento" name="documento" type="text" autocomplete="off"
-	pattern="^\\d{11}$|^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$|^\\d{14}$|^\\d{2}\\.\\d{3}\\.\\d{3}\/\\d{4}-\\d{2}$" value="${documentoAtual}">
+		<input id="documento" name="documento" type="text" autocomplete="off"
+		pattern="^\\d{11}$|^\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}$|^\\d{14}$|^\\d{2}\\.\\d{3}\\.\\d{3}\/\\d{4}-\\d{2}$" value="${documentoAtual}">
 	`;
 	pMaioridade.remove();
 	divMaioridade.innerHTML += `<input id="maioridade" name="maioridade" type="checkbox" ${maioridadeAtual}>`
 	divModificar.innerHTML = `<input class="button" id="modificar" type="submit" value="Modificar"></input>`
 	divEditar.innerHTML = `<button class="button" id="cancelar" onclick="location.reload()">Cancelar</button>`;
 }
-	

@@ -39,7 +39,7 @@ function gerarCaixa1(nomeSorteio, idSorteio) {
         <img class="trevo esquerdo" src="../imagens/shamrock.svg">
         <div class="alinhar">
             <p class="label">${nomeSorteio}</p>
-            <a class="button" href="sorteioadm.html?${idSorteio}">Gerenciar Sorteio</a>
+            <a class="button" href="sorteioadm.html?id=${idSorteio}">Gerenciar Sorteio</a>
         </div>
         <img class="trevo" src="../imagens/shamrock.svg">
     `;
@@ -56,7 +56,7 @@ function gerarCaixa2(nomeSorteio, idSorteio) {
         <img class="trevo esquerdo" src="../imagens/shamrock.svg">
         <div class="alinhar">
             <p class="label">${nomeSorteio}</p>
-            <a class="button" href="sorteio.html?${idSorteio}">Ver Detalhes</a>
+            <a class="button" href="sorteio.html?id=${idSorteio}">Ver Detalhes</a>
         </div>
         <img class="trevo" src="../imagens/shamrock.svg">
     `;
