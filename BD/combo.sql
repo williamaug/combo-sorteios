@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2023 at 10:57 PM
+-- Generation Time: Nov 18, 2023 at 08:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,7 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `inscricao` (
   `id_inscricao` int(10) UNSIGNED NOT NULL,
   `id_sorteio` int(10) UNSIGNED NOT NULL,
-  `documento_participante` varchar(18) NOT NULL
+  `documento_participante` varchar(18) NOT NULL,
+  `numero` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -97,13 +98,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT for table `inscricao`
 --
 ALTER TABLE `inscricao`
-  MODIFY `id_inscricao` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_inscricao` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sorteio`
 --
 ALTER TABLE `sorteio`
-  MODIFY `id_sorteio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_sorteio` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
@@ -113,14 +114,14 @@ ALTER TABLE `sorteio`
 -- Constraints for table `inscricao`
 --
 ALTER TABLE `inscricao`
-  ADD CONSTRAINT `documento_participante` FOREIGN KEY (`documento_participante`) REFERENCES `usuario` (`documento`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `id_sorteio` FOREIGN KEY (`id_sorteio`) REFERENCES `sorteio` (`id_sorteio`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `inscricao_ibfk_1` FOREIGN KEY (`id_sorteio`) REFERENCES `sorteio` (`id_sorteio`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `inscricao_ibfk_2` FOREIGN KEY (`documento_participante`) REFERENCES `usuario` (`documento`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `sorteio`
 --
 ALTER TABLE `sorteio`
-  ADD CONSTRAINT `administrador` FOREIGN KEY (`administrador`) REFERENCES `usuario` (`documento`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `sorteio_ibfk_1` FOREIGN KEY (`administrador`) REFERENCES `usuario` (`documento`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
