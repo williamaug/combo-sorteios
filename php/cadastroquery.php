@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
     $documento = $_POST["documento"];
-    $nome = !empty($_POST["nome"]) ? $_POST["nome"] : "Usuário";
+	$nome = !empty($_POST["nome"]) ? $_POST["nome"] : "Usuário";
     $maioridade = isset($_POST["maioridade"]) ? 1 : 0;
 
     $erro = null;

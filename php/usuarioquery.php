@@ -15,8 +15,8 @@ if ($conectar->connect_error) {
 $email = $_SESSION['email'];
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = isset($_POST["nome"]) ? $_POST["nome"] : "Usuário";
-	$novoemail = $_POST["email"];
+    $nome = !empty($_POST["nome"]) ? $_POST["nome"] : "Usuário";
+	$novoemail = !empty($_POST["email"]) ? $_POST["email"] : $email;
     $documento = $_POST["documento"];
     $maioridade = isset($_POST["maioridade"]) ? 1 : 0;
 	modificarUsuario($nome, $novoemail, $documento, $maioridade, $email);

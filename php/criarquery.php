@@ -4,10 +4,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $data = $_POST["data"];
     $formato = $_POST["formato"];
+	$maximo = !empty($_POST["maximo"]) ? $_POST["maximo"] : null;
+	$contato = !empty($_POST["contato"]) ? $_POST["contato"] : null;
     $maioridade = isset($_POST["maioridade"]) ? 1 : 0;
-
+	
     if (strlen($nome) > 255) {
-        header("Location: ../html/criar.html?error=length");
+        header("Location: ../html/criar.html?error=name");
+        exit();
+    }
+	
+	if (strlen($contato) > 255) {
+        header("Location: ../html/criar.html?error=contact");
         exit();
     }
 	
@@ -19,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
 	}
 
-    if (criarSorteio($nome, $data, $formato, $maioridade)) {
+    if (criarSorteio($nome, $data, $formato, $maximo, $contato, $maioridade)) {
         header("Location: ../html/hub.html");
         exit();
     } else {
@@ -28,8 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-
-function criarSorteio($nome, $data, $formato, $maioridade) {
+function criarSorteio($nome, $data, $formato, $maximo, $contato, $maioridade) {
     $db_host = "localhost";
     $db_user = "root";
     $db_password = "";
@@ -51,12 +57,12 @@ function criarSorteio($nome, $data, $formato, $maioridade) {
 	$stmt_doc->fetch();
 	$stmt_doc->close();
 
-	$stmt = $conectar->prepare("INSERT INTO sorteio (nome_sorteio, data, formato, restricao_maioridade, administrador) VALUES (?, ?, ?, ?, ?)");
-	$stmt->bind_param("sssis", $nome, $data, $formato, $maioridade, $documento);
+	$stmt = $conectar->prepare("INSERT INTO sorteio (nome_sorteio, data, formato, maximo_participantes, contato, restricao_maioridade, administrador) VALUES (?, ?, ?, ?, ?, ?, ?)");
+	$stmt->bind_param("sssisis", $nome, $data, $formato, $maximo, $contato, $maioridade, $documento);
 
     $resultado = $stmt->execute();
-
-    $stmt->close();
+	$stmt->close();
+	
     $conectar->close();
 
     return $resultado;
