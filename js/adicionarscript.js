@@ -1,3 +1,11 @@
+fetch("../php/checarsessao.php")
+	.then(response => response.json())
+	.then(data => {
+	if (!data.sessao) {
+		window.location.href = '../html/login.html?autenticar';
+		}
+	})
+
 const checagem = new URLSearchParams(window.location.search);
 let tipo = checagem.get("error");
 if (tipo != null) {
