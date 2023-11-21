@@ -42,7 +42,7 @@
 	
 	const checagem = new URLSearchParams(window.location.search);
     if (checagem.has('error')) {
-		exibirMsg("E-mail e/ou senha incorreto(s).");
+		exibirMsg("E-mail e/ou senha inválido(s).");
 	} else if (checagem.has('autenticar')) {
 		exibirMsg("Realize sua autenticação antes de prosseguir.");
 	}
