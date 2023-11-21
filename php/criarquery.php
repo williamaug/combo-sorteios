@@ -18,9 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 	
+	$fuso = new DateTimeZone('America/Manaus');
 	$dataAtual = new DateTime();
-	$checagemData = new DateTime($data);
-
+	$dataAtual->setTimezone($fuso);
+	$checagemData = new DateTime($data, $fuso);
+	
+	$dataAtual->setTime(0, 0, 0);
+	$checagemData->setTime(0, 0, 0);
+	
 	if ($dataAtual > $checagemData) {
 		header("Location: ../html/criar.html?error=date");
         exit();

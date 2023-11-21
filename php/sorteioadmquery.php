@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	
 	$checagemId = null;
 	
-	$stmt_id = $conectar->prepare("SELECT nome_sorteio FROM sorteio WHERE id_sorteio = ?");
+	$stmt_id = $conectar->prepare("SELECT nome_sorteio FROM sorteio WHERE id_sorteio = ?;");
 	$stmt_id->bind_param("i", $id);
 	$stmt_id->execute();
 	$stmt_id->bind_result($checagemId);
@@ -44,8 +44,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 	
+	$fuso = new DateTimeZone('America/Manaus');
 	$dataAtual = new DateTime();
-	$checagemData = new DateTime($data);
+	$dataAtual->setTimezone($fuso);
+	$checagemData = new DateTime($data, $fuso);
+	
+	$dataAtual->setTime(0, 0, 0);
+	$checagemData->setTime(0, 0, 0);
 
 	if ($dataAtual > $checagemData) {
 		header("Location: ../html/sorteioadm.html?id=" . $id . "&error=date");
