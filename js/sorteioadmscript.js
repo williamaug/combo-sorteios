@@ -67,9 +67,17 @@ function mostrarDados(i, n, d, f, x, c, m, s) {
     pNome.innerHTML = n;
 	pData.innerHTML = formatarData(d);
 	pFormato.innerHTML = f;
-	pMaximo.innerHTML = x;
-	pContato.innerHTML = c;
 	pInscritos.innerHTML = s;
+	if (x != null) {
+		pMaximo.innerHTML = x;
+	} else {
+		pMaximo.innerHTML = "N/A";
+	}
+	if (c != null) {
+		pContato.innerHTML = c;
+	} else {
+		pContato.innerHTML = "N/A";
+	}
 	if (m) {
 		pMaioridade.innerHTML = "Sim";
 	} else {
@@ -105,7 +113,9 @@ function editar() {
 	let nomeAtual = pNome.textContent;
 	let dataAtual = desformatarData(pData.textContent);
 	let contatoAtual = pContato.textContent;
+		if (contatoAtual === "N/A") {contatoAtual = "";}
 	let maximoAtual = pMaximo.textContent;
+		if (maximoAtual === "N/A") {maximoAtual = "";}
 	let formatoAtualDigital = "";
 	let formatoAtualPresencial = "";
 		if (pFormato.textContent === "Digital") {formatoAtualDigital = "checked";}
@@ -142,6 +152,7 @@ function editar() {
 	divInscritos.remove();
 	buttonEditar.remove();
 	spanBotoes.innerHTML = `
+		<div class="button" id="remover" onclick="confirmar()">Remover</div>
 		<input class="button" id="modificar" type="submit" value="Modificar">
 		<div class="button" id="cancelar" onclick="location.reload()">Cancelar</div>
 	`;
@@ -162,6 +173,27 @@ function habilitar() {
 		rolar();
 	});
 
+}
+
+function confirmar() {
+	let confirmacao = window.confirm("Você realmente deseja remover esse sorteio, assim como todas as inscrições nele registradas? Mantenha em mente que a remoção é um processo permanente, e após realizada não pode ser revertida.")
+	if (confirmacao) {remover();}
+}
+
+function remover() {
+	const jsonString = JSON.stringify(id);
+	
+	fetch("../php/removersorteio.php", {
+	  method: 'POST',
+	  headers: {'Content-Type': 'application/json'},
+	  body: jsonString
+	})
+    .catch(error => {
+		console.error('Erro ao enviar pedido de remoção: ', error);
+		return;
+    });
+	
+	window.location.href = "../html/hub.html";
 }
 
 let numArray = [];
@@ -186,9 +218,8 @@ function rolar() {
 			numArray.push(numAl);
 		}
 		sorte.innerHTML += `<p class="resultado">${numArray.join(' ')}</p>`;
+		rol.innerHTML = `<button class="button" id="mostrar" onclick="mostrarGanhadores()">Mostrar Ganhadores</button>`;
 	}
-	
-	rol.innerHTML = `<button class="button" id="mostrar" onclick="mostrarGanhadores()">Mostrar Ganhadores</button>`;
 };
 
 function mostrarGanhadores() {
